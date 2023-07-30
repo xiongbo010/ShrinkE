@@ -1,0 +1,3719 @@
+nohup: ignoring input
+{'DEVICE': 'cuda', 'DATASET': 'jf17k'}
+Training on 28646 entities
+Model params:  7550892
+{'epochs': 401, 'data': {'train': array([[ 9939,   501,  8662, ...,     0,     0,     0],
+       [ 6657,   271, 14741, ...,     0,     0,     0],
+       [17951,   239,  8431, ...,     0,     0,     0],
+       ...,
+       [ 6624,   556,  5666, ...,     0,     0,     0],
+       [18970,   656, 21429, ...,     0,     0,     0],
+       [26637,   666,  3852, ...,     0,     0,     0]]), 'valid': array([[ 1189,   285,  2982, ...,     0,     0,     0],
+       [23858,   462, 25603, ...,     0,     0,     0],
+       [18038,   239,  9175, ...,     0,     0,     0],
+       ...,
+       [  787,   904, 10042, ...,     0,     0,     0],
+       [ 2982,   787, 25740, ...,     0,     0,     0],
+       [16488,   504,  6008, ...,     0,     0,     0]])}, 'opt': Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.0001
+    lr: 0.0001
+    weight_decay: 0
+), 'train_fn': ShrinkE(
+  (bceloss): BCELoss()
+  (bcelogitloss): BCEWithLogitsLoss()
+  (min_fc): Linear(in_features=1200, out_features=200, bias=True)
+  (max_fc): Linear(in_features=1200, out_features=200, bias=True)
+  (min_fc_1): Linear(in_features=800, out_features=200, bias=True)
+  (max_fc_1): Linear(in_features=800, out_features=200, bias=True)
+  (min_fc_2): Linear(in_features=400, out_features=200, bias=True)
+  (max_fc_2): Linear(in_features=400, out_features=200, bias=True)
+), 'neg_generator': <loops.corruption.Corruption object at 0x7fd8cdec9518>, 'device': device(type='cuda'), 'data_fn': <bound method MultiClassSampler.reset of <loops.sampler.MultiClassSampler object at 0x7fd8cdec9b38>>, 'eval_fn_trn': <function evaluate_pointwise at 0x7fd8cdfeebf8>, 'val_testbench': <bound method EvaluationBenchGNNMultiClass.run of <loops.evaluation.EvaluationBenchGNNMultiClass object at 0x7fd8cda51e10>>, 'trn_testbench': None, 'eval_every': 5, 'log_wandb': False, 'run_trn_testbench': False, 'savedir': None, 'save_content': None, 'qualifier_aware': True, 'grad_clipping': True, 'scheduler': <torch.optim.lr_scheduler.StepLR object at 0x7fd8cdf3d4e0>}
+/workspace/anaconda3/envs/stare/lib/python3.7/site-packages/torch/nn/functional.py:1805: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+Should stop
+[Epoch: 0 ] Loss: 0.001065133644670529
+Epoch: 000 | Loss: 0.00107 |  Time_Train: 3.153 min
+Should stop
+[Epoch: 1 ] Loss: 0.0009754657057677783
+Epoch: 001 | Loss: 0.00098 |  Time_Train: 3.230 min
+Should stop
+[Epoch: 2 ] Loss: 0.0009204486634481403
+Epoch: 002 | Loss: 0.00092 |  Time_Train: 3.231 min
+Should stop
+[Epoch: 3 ] Loss: 0.0008728001137242456
+Epoch: 003 | Loss: 0.00087 |  Time_Train: 3.230 min
+Should stop
+[Epoch: 4 ] Loss: 0.0008323434902430734
+Epoch: 004 | Loss: 0.00083 |  Time_Train: 3.226 min
+Should stop
+[Epoch: 5 ] Loss: 0.0007994184707340062
+This run over 49136 datapoints took 1.582 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 593.2445
+mrr : 0.2521
+hits_at 1 : 0.1937
+hits_at 3 : 0.2622
+hits_at 5 : 0.3025
+hits_at 10 : 0.3656
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 546.5053
+mrr : 0.3154
+hits_at 1 : 0.2311
+hits_at 3 : 0.3501
+hits_at 5 : 0.4024
+hits_at 10 : 0.4809
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 569.8749
+mrr : 0.2837
+hits_at 1 : 0.2124
+hits_at 3 : 0.3062
+hits_at 5 : 0.3525
+hits_at 10 : 0.4232
+Epoch: 005 | Loss: 0.00080 | Vl_c: 0.21237 | Vl_mrr: 0.28374 | Vl_mr: 569.87488 | Vl_h3: 0.30617 | Vl_h5: 0.35245 | Vl_h10: 0.42321 | time_trn: 3.181 min
+Should stop
+[Epoch: 6 ] Loss: 0.0007722994651081584
+Epoch: 006 | Loss: 0.00077 |  Time_Train: 3.226 min
+Should stop
+[Epoch: 7 ] Loss: 0.0007510418991055664
+Epoch: 007 | Loss: 0.00075 |  Time_Train: 3.226 min
+Should stop
+[Epoch: 8 ] Loss: 0.0007336828858786167
+Epoch: 008 | Loss: 0.00073 |  Time_Train: 3.221 min
+Should stop
+[Epoch: 9 ] Loss: 0.0007194739744351813
+Epoch: 009 | Loss: 0.00072 |  Time_Train: 3.228 min
+Should stop
+[Epoch: 10 ] Loss: 0.0007070621385057124
+This run over 49136 datapoints took 1.588 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 413.3695
+mrr : 0.3447
+hits_at 1 : 0.2855
+hits_at 3 : 0.3581
+hits_at 5 : 0.3971
+hits_at 10 : 0.4551
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 342.3112
+mrr : 0.4184
+hits_at 1 : 0.3283
+hits_at 3 : 0.4645
+hits_at 5 : 0.5134
+hits_at 10 : 0.5833
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 377.8403
+mrr : 0.3815
+hits_at 1 : 0.3069
+hits_at 3 : 0.4113
+hits_at 5 : 0.4553
+hits_at 10 : 0.5192
+Epoch: 010 | Loss: 0.00071 | Vl_c: 0.30688 | Vl_mrr: 0.38155 | Vl_mr: 377.84034 | Vl_h3: 0.41131 | Vl_h5: 0.45529 | Vl_h10: 0.51921 | time_trn: 3.179 min
+Should stop
+[Epoch: 11 ] Loss: 0.00069663856222206
+Epoch: 011 | Loss: 0.00070 |  Time_Train: 3.222 min
+Should stop
+[Epoch: 12 ] Loss: 0.0006871367149447709
+Epoch: 012 | Loss: 0.00069 |  Time_Train: 3.228 min
+Should stop
+[Epoch: 13 ] Loss: 0.00067882236970113
+Epoch: 013 | Loss: 0.00068 |  Time_Train: 3.225 min
+Should stop
+[Epoch: 14 ] Loss: 0.0006711271352123837
+Epoch: 014 | Loss: 0.00067 |  Time_Train: 3.224 min
+Should stop
+[Epoch: 15 ] Loss: 0.0006641990832112571
+This run over 49136 datapoints took 1.580 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 299.7285
+mrr : 0.3972
+hits_at 1 : 0.3339
+hits_at 3 : 0.4114
+hits_at 5 : 0.4529
+hits_at 10 : 0.5138
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 244.3938
+mrr : 0.4819
+hits_at 1 : 0.3914
+hits_at 3 : 0.5254
+hits_at 5 : 0.5846
+hits_at 10 : 0.6600
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 272.0611
+mrr : 0.4396
+hits_at 1 : 0.3627
+hits_at 3 : 0.4684
+hits_at 5 : 0.5187
+hits_at 10 : 0.5869
+Epoch: 015 | Loss: 0.00066 | Vl_c: 0.36267 | Vl_mrr: 0.43956 | Vl_mr: 272.06112 | Vl_h3: 0.46839 | Vl_h5: 0.51874 | Vl_h10: 0.58694 | time_trn: 3.170 min
+Should stop
+[Epoch: 16 ] Loss: 0.0006580430509007357
+Epoch: 016 | Loss: 0.00066 |  Time_Train: 3.230 min
+Should stop
+[Epoch: 17 ] Loss: 0.0006522279742986281
+Epoch: 017 | Loss: 0.00065 |  Time_Train: 3.237 min
+Should stop
+[Epoch: 18 ] Loss: 0.0006466214262476872
+Epoch: 018 | Loss: 0.00065 |  Time_Train: 3.230 min
+Should stop
+[Epoch: 19 ] Loss: 0.0006416572863146
+Epoch: 019 | Loss: 0.00064 |  Time_Train: 3.224 min
+Should stop
+[Epoch: 20 ] Loss: 0.0006370895110544473
+This run over 49136 datapoints took 1.586 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 286.6232
+mrr : 0.4247
+hits_at 1 : 0.3583
+hits_at 3 : 0.4421
+hits_at 5 : 0.4855
+hits_at 10 : 0.5473
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 203.8103
+mrr : 0.4964
+hits_at 1 : 0.4099
+hits_at 3 : 0.5326
+hits_at 5 : 0.5847
+hits_at 10 : 0.6651
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 245.2168
+mrr : 0.4606
+hits_at 1 : 0.3841
+hits_at 3 : 0.4874
+hits_at 5 : 0.5351
+hits_at 10 : 0.6062
+Epoch: 020 | Loss: 0.00064 | Vl_c: 0.38410 | Vl_mrr: 0.46056 | Vl_mr: 245.21679 | Vl_h3: 0.48738 | Vl_h5: 0.53509 | Vl_h10: 0.60620 | time_trn: 3.168 min
+Should stop
+[Epoch: 21 ] Loss: 0.0006326689355379795
+Epoch: 021 | Loss: 0.00063 |  Time_Train: 3.218 min
+Should stop
+[Epoch: 22 ] Loss: 0.0006285967851126102
+Epoch: 022 | Loss: 0.00063 |  Time_Train: 3.222 min
+Should stop
+[Epoch: 23 ] Loss: 0.0006248196817770586
+Epoch: 023 | Loss: 0.00062 |  Time_Train: 3.221 min
+Should stop
+[Epoch: 24 ] Loss: 0.0006213052251432055
+Epoch: 024 | Loss: 0.00062 |  Time_Train: 3.230 min
+Should stop
+[Epoch: 25 ] Loss: 0.0006179574933767722
+This run over 49136 datapoints took 1.587 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 230.5703
+mrr : 0.4386
+hits_at 1 : 0.3692
+hits_at 3 : 0.4592
+hits_at 5 : 0.5043
+hits_at 10 : 0.5704
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 175.0938
+mrr : 0.5161
+hits_at 1 : 0.4232
+hits_at 3 : 0.5506
+hits_at 5 : 0.6180
+hits_at 10 : 0.7061
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 202.8321
+mrr : 0.4774
+hits_at 1 : 0.3962
+hits_at 3 : 0.5049
+hits_at 5 : 0.5612
+hits_at 10 : 0.6382
+Epoch: 025 | Loss: 0.00062 | Vl_c: 0.39619 | Vl_mrr: 0.47737 | Vl_mr: 202.83206 | Vl_h3: 0.50486 | Vl_h5: 0.56118 | Vl_h10: 0.63825 | time_trn: 3.185 min
+Should stop
+[Epoch: 26 ] Loss: 0.0006148771475640268
+Epoch: 026 | Loss: 0.00061 |  Time_Train: 3.225 min
+Should stop
+[Epoch: 27 ] Loss: 0.0006118406190598164
+Epoch: 027 | Loss: 0.00061 |  Time_Train: 3.227 min
+Should stop
+[Epoch: 28 ] Loss: 0.0006092111501262687
+Epoch: 028 | Loss: 0.00061 |  Time_Train: 3.225 min
+Should stop
+[Epoch: 29 ] Loss: 0.0006065064092298224
+Epoch: 029 | Loss: 0.00061 |  Time_Train: 3.227 min
+Should stop
+[Epoch: 30 ] Loss: 0.0006041530345438672
+This run over 49136 datapoints took 1.584 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 238.9937
+mrr : 0.4487
+hits_at 1 : 0.3792
+hits_at 3 : 0.4683
+hits_at 5 : 0.5145
+hits_at 10 : 0.5833
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 161.8654
+mrr : 0.5379
+hits_at 1 : 0.4442
+hits_at 3 : 0.5785
+hits_at 5 : 0.6410
+hits_at 10 : 0.7291
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 200.4295
+mrr : 0.4933
+hits_at 1 : 0.4117
+hits_at 3 : 0.5234
+hits_at 5 : 0.5778
+hits_at 10 : 0.6562
+Epoch: 030 | Loss: 0.00060 | Vl_c: 0.41169 | Vl_mrr: 0.49333 | Vl_mr: 200.42954 | Vl_h3: 0.52338 | Vl_h5: 0.57776 | Vl_h10: 0.65620 | time_trn: 3.170 min
+Should stop
+[Epoch: 31 ] Loss: 0.0006018978165511251
+Epoch: 031 | Loss: 0.00060 |  Time_Train: 3.222 min
+Should stop
+[Epoch: 32 ] Loss: 0.0005997872227538067
+Epoch: 032 | Loss: 0.00060 |  Time_Train: 3.202 min
+Should stop
+[Epoch: 33 ] Loss: 0.0005975637871572096
+Epoch: 033 | Loss: 0.00060 |  Time_Train: 3.228 min
+Should stop
+[Epoch: 34 ] Loss: 0.0005957035035276839
+Epoch: 034 | Loss: 0.00060 |  Time_Train: 3.227 min
+Should stop
+[Epoch: 35 ] Loss: 0.0005937329798799938
+This run over 49136 datapoints took 1.586 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 204.2665
+mrr : 0.4564
+hits_at 1 : 0.3846
+hits_at 3 : 0.4779
+hits_at 5 : 0.5247
+hits_at 10 : 0.5968
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 148.0040
+mrr : 0.5540
+hits_at 1 : 0.4590
+hits_at 3 : 0.6001
+hits_at 5 : 0.6640
+hits_at 10 : 0.7412
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 176.1353
+mrr : 0.5052
+hits_at 1 : 0.4218
+hits_at 3 : 0.5390
+hits_at 5 : 0.5944
+hits_at 10 : 0.6690
+Epoch: 035 | Loss: 0.00059 | Vl_c: 0.42183 | Vl_mrr: 0.50519 | Vl_mr: 176.13528 | Vl_h3: 0.53901 | Vl_h5: 0.59437 | Vl_h10: 0.66900 | time_trn: 3.175 min
+Should stop
+[Epoch: 36 ] Loss: 0.000591942498944988
+Epoch: 036 | Loss: 0.00059 |  Time_Train: 3.233 min
+Should stop
+[Epoch: 37 ] Loss: 0.0005902447443900402
+Epoch: 037 | Loss: 0.00059 |  Time_Train: 3.227 min
+Should stop
+[Epoch: 38 ] Loss: 0.0005886982122122723
+Epoch: 038 | Loss: 0.00059 |  Time_Train: 3.227 min
+Should stop
+[Epoch: 39 ] Loss: 0.0005872234330797204
+Epoch: 039 | Loss: 0.00059 |  Time_Train: 3.225 min
+Should stop
+[Epoch: 40 ] Loss: 0.000585902961442964
+This run over 49136 datapoints took 1.588 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 211.6033
+mrr : 0.4627
+hits_at 1 : 0.3897
+hits_at 3 : 0.4862
+hits_at 5 : 0.5339
+hits_at 10 : 0.6053
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 142.7264
+mrr : 0.5555
+hits_at 1 : 0.4619
+hits_at 3 : 0.5963
+hits_at 5 : 0.6609
+hits_at 10 : 0.7469
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 177.1649
+mrr : 0.5091
+hits_at 1 : 0.4258
+hits_at 3 : 0.5413
+hits_at 5 : 0.5974
+hits_at 10 : 0.6761
+Epoch: 040 | Loss: 0.00059 | Vl_c: 0.42582 | Vl_mrr: 0.50911 | Vl_mr: 177.16489 | Vl_h3: 0.54125 | Vl_h5: 0.59740 | Vl_h10: 0.67614 | time_trn: 3.173 min
+Should stop
+[Epoch: 41 ] Loss: 0.0005845549269588358
+Epoch: 041 | Loss: 0.00058 |  Time_Train: 3.226 min
+Should stop
+[Epoch: 42 ] Loss: 0.0005831274917084413
+Epoch: 042 | Loss: 0.00058 |  Time_Train: 3.225 min
+Should stop
+[Epoch: 43 ] Loss: 0.000581767812652272
+Epoch: 043 | Loss: 0.00058 |  Time_Train: 3.224 min
+Should stop
+[Epoch: 44 ] Loss: 0.0005805950360309614
+Epoch: 044 | Loss: 0.00058 |  Time_Train: 3.222 min
+Should stop
+[Epoch: 45 ] Loss: 0.0005794270273714148
+This run over 49136 datapoints took 1.591 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 187.3327
+mrr : 0.4685
+hits_at 1 : 0.3938
+hits_at 3 : 0.4923
+hits_at 5 : 0.5427
+hits_at 10 : 0.6154
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 134.1869
+mrr : 0.5641
+hits_at 1 : 0.4695
+hits_at 3 : 0.6061
+hits_at 5 : 0.6701
+hits_at 10 : 0.7527
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 160.7598
+mrr : 0.5163
+hits_at 1 : 0.4316
+hits_at 3 : 0.5492
+hits_at 5 : 0.6064
+hits_at 10 : 0.6840
+Epoch: 045 | Loss: 0.00058 | Vl_c: 0.43164 | Vl_mrr: 0.51632 | Vl_mr: 160.75979 | Vl_h3: 0.54919 | Vl_h5: 0.60638 | Vl_h10: 0.68404 | time_trn: 3.169 min
+Should stop
+[Epoch: 46 ] Loss: 0.0005783326807882226
+Epoch: 046 | Loss: 0.00058 |  Time_Train: 2.514 min
+Should stop
+[Epoch: 47 ] Loss: 0.0005773031310407117
+Epoch: 047 | Loss: 0.00058 |  Time_Train: 3.136 min
+Should stop
+[Epoch: 48 ] Loss: 0.0005764199835806725
+Epoch: 048 | Loss: 0.00058 |  Time_Train: 3.357 min
+Should stop
+[Epoch: 49 ] Loss: 0.0005752766663406758
+Epoch: 049 | Loss: 0.00058 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 50 ] Loss: 0.000574295854194151
+This run over 49136 datapoints took 1.660 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 193.1576
+mrr : 0.4736
+hits_at 1 : 0.3989
+hits_at 3 : 0.4983
+hits_at 5 : 0.5470
+hits_at 10 : 0.6202
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 132.2401
+mrr : 0.5670
+hits_at 1 : 0.4713
+hits_at 3 : 0.6128
+hits_at 5 : 0.6732
+hits_at 10 : 0.7534
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 162.6988
+mrr : 0.5203
+hits_at 1 : 0.4351
+hits_at 3 : 0.5556
+hits_at 5 : 0.6101
+hits_at 10 : 0.6868
+Epoch: 050 | Loss: 0.00057 | Vl_c: 0.43512 | Vl_mrr: 0.52033 | Vl_mr: 162.69884 | Vl_h3: 0.55556 | Vl_h5: 0.61008 | Vl_h10: 0.68683 | time_trn: 3.299 min
+Should stop
+[Epoch: 51 ] Loss: 0.0005731716950431222
+Epoch: 051 | Loss: 0.00057 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 52 ] Loss: 0.0005723116356461549
+Epoch: 052 | Loss: 0.00057 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 53 ] Loss: 0.0005715806558467015
+Epoch: 053 | Loss: 0.00057 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 54 ] Loss: 0.0005707508254781856
+Epoch: 054 | Loss: 0.00057 |  Time_Train: 3.351 min
+Should stop
+[Epoch: 55 ] Loss: 0.0005699982197875989
+This run over 49136 datapoints took 1.660 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 180.1575
+mrr : 0.4784
+hits_at 1 : 0.4034
+hits_at 3 : 0.5026
+hits_at 5 : 0.5519
+hits_at 10 : 0.6253
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 126.5622
+mrr : 0.5669
+hits_at 1 : 0.4713
+hits_at 3 : 0.6115
+hits_at 5 : 0.6754
+hits_at 10 : 0.7580
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 153.3599
+mrr : 0.5227
+hits_at 1 : 0.4374
+hits_at 3 : 0.5571
+hits_at 5 : 0.6136
+hits_at 10 : 0.6917
+Epoch: 055 | Loss: 0.00057 | Vl_c: 0.43736 | Vl_mrr: 0.52267 | Vl_mr: 153.35988 | Vl_h3: 0.55707 | Vl_h5: 0.61364 | Vl_h10: 0.69167 | time_trn: 3.295 min
+Should stop
+[Epoch: 56 ] Loss: 0.0005692444020941695
+Epoch: 056 | Loss: 0.00057 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 57 ] Loss: 0.0005685449223217827
+Epoch: 057 | Loss: 0.00057 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 58 ] Loss: 0.0005679702656694852
+Epoch: 058 | Loss: 0.00057 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 59 ] Loss: 0.0005672219125157658
+Epoch: 059 | Loss: 0.00057 |  Time_Train: 3.353 min
+Should stop
+[Epoch: 60 ] Loss: 0.0005665093031441666
+This run over 49136 datapoints took 1.662 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 178.9265
+mrr : 0.4811
+hits_at 1 : 0.4049
+hits_at 3 : 0.5059
+hits_at 5 : 0.5570
+hits_at 10 : 0.6305
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 126.0871
+mrr : 0.5747
+hits_at 1 : 0.4786
+hits_at 3 : 0.6220
+hits_at 5 : 0.6815
+hits_at 10 : 0.7613
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 152.5068
+mrr : 0.5279
+hits_at 1 : 0.4417
+hits_at 3 : 0.5640
+hits_at 5 : 0.6193
+hits_at 10 : 0.6959
+Epoch: 060 | Loss: 0.00057 | Vl_c: 0.44173 | Vl_mrr: 0.52787 | Vl_mr: 152.50682 | Vl_h3: 0.56397 | Vl_h5: 0.61926 | Vl_h10: 0.69593 | time_trn: 3.281 min
+Should stop
+[Epoch: 61 ] Loss: 0.0005659171369069073
+Epoch: 061 | Loss: 0.00057 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 62 ] Loss: 0.0005652181762748
+Epoch: 062 | Loss: 0.00057 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 63 ] Loss: 0.0005646203345091332
+Epoch: 063 | Loss: 0.00056 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 64 ] Loss: 0.0005640298873681496
+Epoch: 064 | Loss: 0.00056 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 65 ] Loss: 0.0005634335304044792
+This run over 49136 datapoints took 1.662 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 168.6484
+mrr : 0.4852
+hits_at 1 : 0.4087
+hits_at 3 : 0.5096
+hits_at 5 : 0.5609
+hits_at 10 : 0.6340
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 121.9959
+mrr : 0.5748
+hits_at 1 : 0.4800
+hits_at 3 : 0.6211
+hits_at 5 : 0.6812
+hits_at 10 : 0.7616
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 145.3222
+mrr : 0.5300
+hits_at 1 : 0.4443
+hits_at 3 : 0.5653
+hits_at 5 : 0.6211
+hits_at 10 : 0.6978
+Epoch: 065 | Loss: 0.00056 | Vl_c: 0.44434 | Vl_mrr: 0.53000 | Vl_mr: 145.32217 | Vl_h3: 0.56535 | Vl_h5: 0.62105 | Vl_h10: 0.69782 | time_trn: 3.289 min
+Should stop
+[Epoch: 66 ] Loss: 0.0005629166383818657
+Epoch: 066 | Loss: 0.00056 |  Time_Train: 3.343 min
+Should stop
+[Epoch: 67 ] Loss: 0.0005623190652496205
+Epoch: 067 | Loss: 0.00056 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 68 ] Loss: 0.0005617646160004102
+Epoch: 068 | Loss: 0.00056 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 69 ] Loss: 0.0005611468657510755
+Epoch: 069 | Loss: 0.00056 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 70 ] Loss: 0.0005608262071778684
+This run over 49136 datapoints took 1.665 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 172.5973
+mrr : 0.4880
+hits_at 1 : 0.4106
+hits_at 3 : 0.5144
+hits_at 5 : 0.5647
+hits_at 10 : 0.6399
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 121.7498
+mrr : 0.5776
+hits_at 1 : 0.4836
+hits_at 3 : 0.6235
+hits_at 5 : 0.6824
+hits_at 10 : 0.7638
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 147.1736
+mrr : 0.5328
+hits_at 1 : 0.4471
+hits_at 3 : 0.5689
+hits_at 5 : 0.6235
+hits_at 10 : 0.7018
+Epoch: 070 | Loss: 0.00056 | Vl_c: 0.44711 | Vl_mrr: 0.53278 | Vl_mr: 147.17358 | Vl_h3: 0.56891 | Vl_h5: 0.62351 | Vl_h10: 0.70185 | time_trn: 3.289 min
+Should stop
+[Epoch: 71 ] Loss: 0.0005601741915309309
+Epoch: 071 | Loss: 0.00056 |  Time_Train: 3.340 min
+Should stop
+[Epoch: 72 ] Loss: 0.0005599923370625803
+Epoch: 072 | Loss: 0.00056 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 73 ] Loss: 0.0005593570960303715
+Epoch: 073 | Loss: 0.00056 |  Time_Train: 3.337 min
+Should stop
+[Epoch: 74 ] Loss: 0.0005588438325855211
+Epoch: 074 | Loss: 0.00056 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 75 ] Loss: 0.0005582486098268335
+This run over 49136 datapoints took 1.664 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 161.8695
+mrr : 0.4910
+hits_at 1 : 0.4144
+hits_at 3 : 0.5169
+hits_at 5 : 0.5666
+hits_at 10 : 0.6422
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 118.7775
+mrr : 0.5782
+hits_at 1 : 0.4863
+hits_at 3 : 0.6237
+hits_at 5 : 0.6814
+hits_at 10 : 0.7643
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 140.3235
+mrr : 0.5346
+hits_at 1 : 0.4504
+hits_at 3 : 0.5703
+hits_at 5 : 0.6240
+hits_at 10 : 0.7032
+Epoch: 075 | Loss: 0.00056 | Vl_c: 0.45036 | Vl_mrr: 0.53456 | Vl_mr: 140.32353 | Vl_h3: 0.57032 | Vl_h5: 0.62400 | Vl_h10: 0.70323 | time_trn: 3.267 min
+Should stop
+[Epoch: 76 ] Loss: 0.0005580572347468345
+Epoch: 076 | Loss: 0.00056 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 77 ] Loss: 0.0005573330932779587
+Epoch: 077 | Loss: 0.00056 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 78 ] Loss: 0.0005570011269940672
+Epoch: 078 | Loss: 0.00056 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 79 ] Loss: 0.0005565517777563532
+Epoch: 079 | Loss: 0.00056 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 80 ] Loss: 0.0005561637639687748
+This run over 49136 datapoints took 1.662 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 165.3867
+mrr : 0.4943
+hits_at 1 : 0.4179
+hits_at 3 : 0.5192
+hits_at 5 : 0.5699
+hits_at 10 : 0.6473
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 119.2743
+mrr : 0.5891
+hits_at 1 : 0.4980
+hits_at 3 : 0.6332
+hits_at 5 : 0.6926
+hits_at 10 : 0.7697
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 142.3305
+mrr : 0.5417
+hits_at 1 : 0.4580
+hits_at 3 : 0.5762
+hits_at 5 : 0.6313
+hits_at 10 : 0.7085
+Epoch: 080 | Loss: 0.00056 | Vl_c: 0.45797 | Vl_mrr: 0.54171 | Vl_mr: 142.33049 | Vl_h3: 0.57620 | Vl_h5: 0.63127 | Vl_h10: 0.70850 | time_trn: 3.285 min
+Should stop
+[Epoch: 81 ] Loss: 0.000555691789570886
+Epoch: 081 | Loss: 0.00056 |  Time_Train: 3.339 min
+Should stop
+[Epoch: 82 ] Loss: 0.000555370639216126
+Epoch: 082 | Loss: 0.00056 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 83 ] Loss: 0.0005548676438503529
+Epoch: 083 | Loss: 0.00055 |  Time_Train: 3.355 min
+Should stop
+[Epoch: 84 ] Loss: 0.0005544752421396166
+Epoch: 084 | Loss: 0.00055 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 85 ] Loss: 0.0005541711570438343
+This run over 49136 datapoints took 1.663 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 156.9803
+mrr : 0.4965
+hits_at 1 : 0.4190
+hits_at 3 : 0.5223
+hits_at 5 : 0.5726
+hits_at 10 : 0.6508
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 117.8675
+mrr : 0.5888
+hits_at 1 : 0.4958
+hits_at 3 : 0.6328
+hits_at 5 : 0.6935
+hits_at 10 : 0.7708
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 137.4239
+mrr : 0.5427
+hits_at 1 : 0.4574
+hits_at 3 : 0.5776
+hits_at 5 : 0.6331
+hits_at 10 : 0.7108
+Epoch: 085 | Loss: 0.00055 | Vl_c: 0.45742 | Vl_mrr: 0.54268 | Vl_mr: 137.42391 | Vl_h3: 0.57756 | Vl_h5: 0.63308 | Vl_h10: 0.71076 | time_trn: 3.285 min
+Should stop
+[Epoch: 86 ] Loss: 0.0005537553982425488
+Epoch: 086 | Loss: 0.00055 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 87 ] Loss: 0.0005532858272468602
+Epoch: 087 | Loss: 0.00055 |  Time_Train: 3.343 min
+Should stop
+[Epoch: 88 ] Loss: 0.000553019464881082
+Epoch: 088 | Loss: 0.00055 |  Time_Train: 3.343 min
+Should stop
+[Epoch: 89 ] Loss: 0.0005526709470742993
+Epoch: 089 | Loss: 0.00055 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 90 ] Loss: 0.0005523465629856191
+This run over 49136 datapoints took 1.663 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 159.0915
+mrr : 0.4990
+hits_at 1 : 0.4210
+hits_at 3 : 0.5253
+hits_at 5 : 0.5760
+hits_at 10 : 0.6541
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 118.7757
+mrr : 0.5854
+hits_at 1 : 0.4917
+hits_at 3 : 0.6319
+hits_at 5 : 0.6904
+hits_at 10 : 0.7712
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 138.9336
+mrr : 0.5422
+hits_at 1 : 0.4563
+hits_at 3 : 0.5786
+hits_at 5 : 0.6332
+hits_at 10 : 0.7127
+Epoch: 090 | Loss: 0.00055 | Vl_c: 0.45635 | Vl_mrr: 0.54217 | Vl_mr: 138.93359 | Vl_h3: 0.57860 | Vl_h5: 0.63318 | Vl_h10: 0.71265 | time_trn: 3.293 min
+Should stop
+[Epoch: 91 ] Loss: 0.0005518395707125611
+Epoch: 091 | Loss: 0.00055 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 92 ] Loss: 0.0005515170022075171
+Epoch: 092 | Loss: 0.00055 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 93 ] Loss: 0.0005511955833882165
+Epoch: 093 | Loss: 0.00055 |  Time_Train: 3.344 min
+Should stop
+[Epoch: 94 ] Loss: 0.0005509193390616841
+Epoch: 094 | Loss: 0.00055 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 95 ] Loss: 0.0005505080198611509
+This run over 49136 datapoints took 1.666 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 153.0674
+mrr : 0.5017
+hits_at 1 : 0.4234
+hits_at 3 : 0.5286
+hits_at 5 : 0.5795
+hits_at 10 : 0.6561
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 116.9820
+mrr : 0.5954
+hits_at 1 : 0.5044
+hits_at 3 : 0.6394
+hits_at 5 : 0.7004
+hits_at 10 : 0.7746
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 135.0247
+mrr : 0.5486
+hits_at 1 : 0.4639
+hits_at 3 : 0.5840
+hits_at 5 : 0.6399
+hits_at 10 : 0.7153
+Epoch: 095 | Loss: 0.00055 | Vl_c: 0.46392 | Vl_mrr: 0.54857 | Vl_mr: 135.02475 | Vl_h3: 0.58399 | Vl_h5: 0.63994 | Vl_h10: 0.71534 | time_trn: 3.291 min
+Should stop
+[Epoch: 96 ] Loss: 0.0005502055793288172
+Epoch: 096 | Loss: 0.00055 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 97 ] Loss: 0.0005498976678392945
+Epoch: 097 | Loss: 0.00055 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 98 ] Loss: 0.0005495248764246248
+Epoch: 098 | Loss: 0.00055 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 99 ] Loss: 0.0005492087016989994
+Epoch: 099 | Loss: 0.00055 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 100 ] Loss: 0.0005487805255823832
+This run over 49136 datapoints took 1.663 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 152.6114
+mrr : 0.5038
+hits_at 1 : 0.4257
+hits_at 3 : 0.5303
+hits_at 5 : 0.5815
+hits_at 10 : 0.6587
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 117.9723
+mrr : 0.5973
+hits_at 1 : 0.5067
+hits_at 3 : 0.6411
+hits_at 5 : 0.7003
+hits_at 10 : 0.7761
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 135.2918
+mrr : 0.5505
+hits_at 1 : 0.4662
+hits_at 3 : 0.5857
+hits_at 5 : 0.6409
+hits_at 10 : 0.7174
+Epoch: 100 | Loss: 0.00055 | Vl_c: 0.46618 | Vl_mrr: 0.55055 | Vl_mr: 135.29184 | Vl_h3: 0.58568 | Vl_h5: 0.64092 | Vl_h10: 0.71740 | time_trn: 3.271 min
+Should stop
+[Epoch: 101 ] Loss: 0.0005483633722741575
+Epoch: 101 | Loss: 0.00055 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 102 ] Loss: 0.000547985159159265
+Epoch: 102 | Loss: 0.00055 |  Time_Train: 3.325 min
+Should stop
+[Epoch: 103 ] Loss: 0.0005477037779785101
+Epoch: 103 | Loss: 0.00055 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 104 ] Loss: 0.0005476012925267926
+Epoch: 104 | Loss: 0.00055 |  Time_Train: 3.351 min
+Should stop
+[Epoch: 105 ] Loss: 0.0005471212116706886
+This run over 49136 datapoints took 1.669 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 151.3358
+mrr : 0.5063
+hits_at 1 : 0.4281
+hits_at 3 : 0.5337
+hits_at 5 : 0.5851
+hits_at 10 : 0.6617
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 117.7119
+mrr : 0.5970
+hits_at 1 : 0.5046
+hits_at 3 : 0.6425
+hits_at 5 : 0.7006
+hits_at 10 : 0.7763
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 134.5239
+mrr : 0.5517
+hits_at 1 : 0.4663
+hits_at 3 : 0.5881
+hits_at 5 : 0.6428
+hits_at 10 : 0.7190
+Epoch: 105 | Loss: 0.00055 | Vl_c: 0.46634 | Vl_mrr: 0.55167 | Vl_mr: 134.52385 | Vl_h3: 0.58812 | Vl_h5: 0.64283 | Vl_h10: 0.71898 | time_trn: 3.287 min
+Should stop
+[Epoch: 106 ] Loss: 0.0005469646386359053
+Epoch: 106 | Loss: 0.00055 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 107 ] Loss: 0.0005466348134256842
+Epoch: 107 | Loss: 0.00055 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 108 ] Loss: 0.0005463731452769544
+Epoch: 108 | Loss: 0.00055 |  Time_Train: 3.353 min
+Should stop
+[Epoch: 109 ] Loss: 0.0005460631912276941
+Epoch: 109 | Loss: 0.00055 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 110 ] Loss: 0.0005458520625842234
+This run over 49136 datapoints took 1.665 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 147.9763
+mrr : 0.5076
+hits_at 1 : 0.4287
+hits_at 3 : 0.5351
+hits_at 5 : 0.5867
+hits_at 10 : 0.6635
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 117.8723
+mrr : 0.5978
+hits_at 1 : 0.5070
+hits_at 3 : 0.6419
+hits_at 5 : 0.7004
+hits_at 10 : 0.7777
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 132.9243
+mrr : 0.5527
+hits_at 1 : 0.4678
+hits_at 3 : 0.5885
+hits_at 5 : 0.6435
+hits_at 10 : 0.7206
+Epoch: 110 | Loss: 0.00055 | Vl_c: 0.46784 | Vl_mrr: 0.55270 | Vl_mr: 132.92429 | Vl_h3: 0.58851 | Vl_h5: 0.64354 | Vl_h10: 0.72059 | time_trn: 3.283 min
+Should stop
+[Epoch: 111 ] Loss: 0.0005455584529534206
+Epoch: 111 | Loss: 0.00055 |  Time_Train: 3.353 min
+Should stop
+[Epoch: 112 ] Loss: 0.0005452808796457868
+Epoch: 112 | Loss: 0.00055 |  Time_Train: 3.344 min
+Should stop
+[Epoch: 113 ] Loss: 0.0005450466251098938
+Epoch: 113 | Loss: 0.00055 |  Time_Train: 3.337 min
+Should stop
+[Epoch: 114 ] Loss: 0.0005448294345382241
+Epoch: 114 | Loss: 0.00054 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 115 ] Loss: 0.0005444828348821552
+This run over 49136 datapoints took 1.666 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 148.7125
+mrr : 0.5100
+hits_at 1 : 0.4317
+hits_at 3 : 0.5374
+hits_at 5 : 0.5899
+hits_at 10 : 0.6668
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 117.2097
+mrr : 0.5989
+hits_at 1 : 0.5077
+hits_at 3 : 0.6450
+hits_at 5 : 0.7024
+hits_at 10 : 0.7786
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 132.9611
+mrr : 0.5545
+hits_at 1 : 0.4697
+hits_at 3 : 0.5912
+hits_at 5 : 0.6461
+hits_at 10 : 0.7227
+Epoch: 115 | Loss: 0.00054 | Vl_c: 0.46972 | Vl_mrr: 0.55446 | Vl_mr: 132.96111 | Vl_h3: 0.59122 | Vl_h5: 0.64615 | Vl_h10: 0.72271 | time_trn: 3.291 min
+Should stop
+[Epoch: 116 ] Loss: 0.0005441949604510562
+Epoch: 116 | Loss: 0.00054 |  Time_Train: 3.359 min
+Should stop
+[Epoch: 117 ] Loss: 0.0005440291250237161
+Epoch: 117 | Loss: 0.00054 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 118 ] Loss: 0.0005438180337029526
+Epoch: 118 | Loss: 0.00054 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 119 ] Loss: 0.0005434655143728037
+Epoch: 119 | Loss: 0.00054 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 120 ] Loss: 0.0005432930255959052
+This run over 49136 datapoints took 1.670 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 148.1359
+mrr : 0.5118
+hits_at 1 : 0.4333
+hits_at 3 : 0.5390
+hits_at 5 : 0.5914
+hits_at 10 : 0.6676
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 118.4310
+mrr : 0.6014
+hits_at 1 : 0.5118
+hits_at 3 : 0.6446
+hits_at 5 : 0.7023
+hits_at 10 : 0.7785
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 133.2835
+mrr : 0.5566
+hits_at 1 : 0.4726
+hits_at 3 : 0.5918
+hits_at 5 : 0.6468
+hits_at 10 : 0.7230
+Epoch: 120 | Loss: 0.00054 | Vl_c: 0.47259 | Vl_mrr: 0.55658 | Vl_mr: 133.28346 | Vl_h3: 0.59183 | Vl_h5: 0.64682 | Vl_h10: 0.72303 | time_trn: 3.290 min
+Should stop
+[Epoch: 121 ] Loss: 0.0005429277863719175
+Epoch: 121 | Loss: 0.00054 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 122 ] Loss: 0.0005427246974223623
+Epoch: 122 | Loss: 0.00054 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 123 ] Loss: 0.0005425060426521816
+Epoch: 123 | Loss: 0.00054 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 124 ] Loss: 0.0005423552762537769
+Epoch: 124 | Loss: 0.00054 |  Time_Train: 3.344 min
+Should stop
+[Epoch: 125 ] Loss: 0.0005420508670190086
+This run over 49136 datapoints took 1.669 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.4791
+mrr : 0.5135
+hits_at 1 : 0.4347
+hits_at 3 : 0.5421
+hits_at 5 : 0.5935
+hits_at 10 : 0.6688
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 117.9591
+mrr : 0.6041
+hits_at 1 : 0.5140
+hits_at 3 : 0.6492
+hits_at 5 : 0.7055
+hits_at 10 : 0.7786
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 131.7191
+mrr : 0.5588
+hits_at 1 : 0.4743
+hits_at 3 : 0.5956
+hits_at 5 : 0.6495
+hits_at 10 : 0.7237
+Epoch: 125 | Loss: 0.00054 | Vl_c: 0.47432 | Vl_mrr: 0.55881 | Vl_mr: 131.71909 | Vl_h3: 0.59563 | Vl_h5: 0.64950 | Vl_h10: 0.72369 | time_trn: 3.284 min
+Should stop
+[Epoch: 126 ] Loss: 0.00054183732275761
+Epoch: 126 | Loss: 0.00054 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 127 ] Loss: 0.0005416480321198435
+Epoch: 127 | Loss: 0.00054 |  Time_Train: 3.337 min
+Should stop
+[Epoch: 128 ] Loss: 0.0005413726204330718
+Epoch: 128 | Loss: 0.00054 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 129 ] Loss: 0.0005411220780538658
+Epoch: 129 | Loss: 0.00054 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 130 ] Loss: 0.0005408588337947973
+This run over 49136 datapoints took 1.643 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.5807
+mrr : 0.5150
+hits_at 1 : 0.4360
+hits_at 3 : 0.5435
+hits_at 5 : 0.5963
+hits_at 10 : 0.6703
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 118.7662
+mrr : 0.6038
+hits_at 1 : 0.5142
+hits_at 3 : 0.6478
+hits_at 5 : 0.7042
+hits_at 10 : 0.7798
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 132.6735
+mrr : 0.5594
+hits_at 1 : 0.4751
+hits_at 3 : 0.5956
+hits_at 5 : 0.6503
+hits_at 10 : 0.7251
+Epoch: 130 | Loss: 0.00054 | Vl_c: 0.47507 | Vl_mrr: 0.55941 | Vl_mr: 132.67346 | Vl_h3: 0.59561 | Vl_h5: 0.65028 | Vl_h10: 0.72507 | time_trn: 3.287 min
+Should stop
+[Epoch: 131 ] Loss: 0.0005406952116659139
+Epoch: 131 | Loss: 0.00054 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 132 ] Loss: 0.0005404604209890513
+Epoch: 132 | Loss: 0.00054 |  Time_Train: 3.355 min
+Should stop
+[Epoch: 133 ] Loss: 0.0005402585297437453
+Epoch: 133 | Loss: 0.00054 |  Time_Train: 3.343 min
+Should stop
+[Epoch: 134 ] Loss: 0.0005401303382352628
+Epoch: 134 | Loss: 0.00054 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 135 ] Loss: 0.000539829484058717
+This run over 49136 datapoints took 1.669 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.1771
+mrr : 0.5170
+hits_at 1 : 0.4379
+hits_at 3 : 0.5453
+hits_at 5 : 0.5987
+hits_at 10 : 0.6718
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 118.8241
+mrr : 0.6073
+hits_at 1 : 0.5189
+hits_at 3 : 0.6507
+hits_at 5 : 0.7077
+hits_at 10 : 0.7815
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 131.5006
+mrr : 0.5621
+hits_at 1 : 0.4784
+hits_at 3 : 0.5980
+hits_at 5 : 0.6532
+hits_at 10 : 0.7267
+Epoch: 135 | Loss: 0.00054 | Vl_c: 0.47841 | Vl_mrr: 0.56211 | Vl_mr: 131.50063 | Vl_h3: 0.59801 | Vl_h5: 0.65319 | Vl_h10: 0.72668 | time_trn: 3.285 min
+Should stop
+[Epoch: 136 ] Loss: 0.0005396959150405474
+Epoch: 136 | Loss: 0.00054 |  Time_Train: 3.355 min
+Should stop
+[Epoch: 137 ] Loss: 0.0005393459164849131
+Epoch: 137 | Loss: 0.00054 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 138 ] Loss: 0.00053917724560141
+Epoch: 138 | Loss: 0.00054 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 139 ] Loss: 0.0005389802577604523
+Epoch: 139 | Loss: 0.00054 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 140 ] Loss: 0.0005387391632051717
+This run over 49136 datapoints took 1.669 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.2468
+mrr : 0.5179
+hits_at 1 : 0.4388
+hits_at 3 : 0.5455
+hits_at 5 : 0.6002
+hits_at 10 : 0.6731
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 119.5854
+mrr : 0.6077
+hits_at 1 : 0.5192
+hits_at 3 : 0.6508
+hits_at 5 : 0.7080
+hits_at 10 : 0.7815
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 132.9161
+mrr : 0.5628
+hits_at 1 : 0.4790
+hits_at 3 : 0.5982
+hits_at 5 : 0.6541
+hits_at 10 : 0.7273
+Epoch: 140 | Loss: 0.00054 | Vl_c: 0.47900 | Vl_mrr: 0.56276 | Vl_mr: 132.91609 | Vl_h3: 0.59816 | Vl_h5: 0.65410 | Vl_h10: 0.72731 | time_trn: 3.282 min
+Should stop
+[Epoch: 141 ] Loss: 0.0005387008372884301
+Epoch: 141 | Loss: 0.00054 |  Time_Train: 3.351 min
+Should stop
+[Epoch: 142 ] Loss: 0.0005383842683381922
+Epoch: 142 | Loss: 0.00054 |  Time_Train: 3.357 min
+Should stop
+[Epoch: 143 ] Loss: 0.000538181902199436
+Epoch: 143 | Loss: 0.00054 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 144 ] Loss: 0.0005379525656479535
+Epoch: 144 | Loss: 0.00054 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 145 ] Loss: 0.0005377538528561779
+This run over 49136 datapoints took 1.673 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 143.9017
+mrr : 0.5197
+hits_at 1 : 0.4405
+hits_at 3 : 0.5486
+hits_at 5 : 0.6014
+hits_at 10 : 0.6747
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 119.6348
+mrr : 0.6088
+hits_at 1 : 0.5193
+hits_at 3 : 0.6537
+hits_at 5 : 0.7091
+hits_at 10 : 0.7822
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 131.7682
+mrr : 0.5642
+hits_at 1 : 0.4799
+hits_at 3 : 0.6012
+hits_at 5 : 0.6552
+hits_at 10 : 0.7284
+Epoch: 145 | Loss: 0.00054 | Vl_c: 0.47989 | Vl_mrr: 0.56421 | Vl_mr: 131.76824 | Vl_h3: 0.60119 | Vl_h5: 0.65520 | Vl_h10: 0.72841 | time_trn: 3.285 min
+Should stop
+[Epoch: 146 ] Loss: 0.0005375734152433569
+Epoch: 146 | Loss: 0.00054 |  Time_Train: 3.360 min
+Should stop
+[Epoch: 147 ] Loss: 0.0005374330309187233
+Epoch: 147 | Loss: 0.00054 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 148 ] Loss: 0.0005371630201035141
+Epoch: 148 | Loss: 0.00054 |  Time_Train: 3.351 min
+Should stop
+[Epoch: 149 ] Loss: 0.0005369888615998938
+Epoch: 149 | Loss: 0.00054 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 150 ] Loss: 0.000536693283998474
+This run over 49136 datapoints took 1.673 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.0114
+mrr : 0.5209
+hits_at 1 : 0.4419
+hits_at 3 : 0.5490
+hits_at 5 : 0.6032
+hits_at 10 : 0.6758
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 120.2264
+mrr : 0.6039
+hits_at 1 : 0.5135
+hits_at 3 : 0.6464
+hits_at 5 : 0.7045
+hits_at 10 : 0.7806
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 132.6189
+mrr : 0.5624
+hits_at 1 : 0.4777
+hits_at 3 : 0.5977
+hits_at 5 : 0.6538
+hits_at 10 : 0.7282
+Epoch: 150 | Loss: 0.00054 | Vl_c: 0.47769 | Vl_mrr: 0.56238 | Vl_mr: 132.61887 | Vl_h3: 0.59769 | Vl_h5: 0.65382 | Vl_h10: 0.72822 | time_trn: 3.284 min
+Should stop
+[Epoch: 151 ] Loss: 0.0005363001508640064
+Epoch: 151 | Loss: 0.00054 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 152 ] Loss: 0.0005362015710112313
+Epoch: 152 | Loss: 0.00054 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 153 ] Loss: 0.000536025739853618
+Epoch: 153 | Loss: 0.00054 |  Time_Train: 3.351 min
+Should stop
+[Epoch: 154 ] Loss: 0.0005358165450105029
+Epoch: 154 | Loss: 0.00054 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 155 ] Loss: 0.0005356544061636866
+This run over 49136 datapoints took 1.675 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.9638
+mrr : 0.5222
+hits_at 1 : 0.4432
+hits_at 3 : 0.5512
+hits_at 5 : 0.6033
+hits_at 10 : 0.6773
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 120.6680
+mrr : 0.6095
+hits_at 1 : 0.5206
+hits_at 3 : 0.6521
+hits_at 5 : 0.7093
+hits_at 10 : 0.7826
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 132.8159
+mrr : 0.5658
+hits_at 1 : 0.4819
+hits_at 3 : 0.6017
+hits_at 5 : 0.6563
+hits_at 10 : 0.7300
+Epoch: 155 | Loss: 0.00054 | Vl_c: 0.48189 | Vl_mrr: 0.56585 | Vl_mr: 132.81592 | Vl_h3: 0.60168 | Vl_h5: 0.65632 | Vl_h10: 0.72995 | time_trn: 3.267 min
+Should stop
+[Epoch: 156 ] Loss: 0.0005355251786263922
+Epoch: 156 | Loss: 0.00054 |  Time_Train: 3.357 min
+Should stop
+[Epoch: 157 ] Loss: 0.0005354482798325529
+Epoch: 157 | Loss: 0.00054 |  Time_Train: 3.353 min
+Should stop
+[Epoch: 158 ] Loss: 0.0005351775311761332
+Epoch: 158 | Loss: 0.00054 |  Time_Train: 3.331 min
+Should stop
+[Epoch: 159 ] Loss: 0.0005349848414136267
+Epoch: 159 | Loss: 0.00053 |  Time_Train: 3.355 min
+Should stop
+[Epoch: 160 ] Loss: 0.0005347888366291318
+This run over 49136 datapoints took 1.676 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 142.9974
+mrr : 0.5238
+hits_at 1 : 0.4453
+hits_at 3 : 0.5523
+hits_at 5 : 0.6060
+hits_at 10 : 0.6781
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 120.7791
+mrr : 0.6127
+hits_at 1 : 0.5246
+hits_at 3 : 0.6563
+hits_at 5 : 0.7114
+hits_at 10 : 0.7832
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 131.8883
+mrr : 0.5682
+hits_at 1 : 0.4849
+hits_at 3 : 0.6043
+hits_at 5 : 0.6587
+hits_at 10 : 0.7306
+Epoch: 160 | Loss: 0.00053 | Vl_c: 0.48494 | Vl_mrr: 0.56824 | Vl_mr: 131.88827 | Vl_h3: 0.60432 | Vl_h5: 0.65870 | Vl_h10: 0.73065 | time_trn: 3.279 min
+Should stop
+[Epoch: 161 ] Loss: 0.0005347022492433151
+Epoch: 161 | Loss: 0.00053 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 162 ] Loss: 0.0005345352451029689
+Epoch: 162 | Loss: 0.00053 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 163 ] Loss: 0.0005343885340446848
+Epoch: 163 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 164 ] Loss: 0.0005340708329723301
+Epoch: 164 | Loss: 0.00053 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 165 ] Loss: 0.0005340023452417863
+This run over 49136 datapoints took 1.674 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 143.8553
+mrr : 0.5247
+hits_at 1 : 0.4457
+hits_at 3 : 0.5537
+hits_at 5 : 0.6071
+hits_at 10 : 0.6797
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 121.1617
+mrr : 0.6128
+hits_at 1 : 0.5255
+hits_at 3 : 0.6551
+hits_at 5 : 0.7106
+hits_at 10 : 0.7841
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 132.5085
+mrr : 0.5688
+hits_at 1 : 0.4856
+hits_at 3 : 0.6044
+hits_at 5 : 0.6588
+hits_at 10 : 0.7319
+Epoch: 165 | Loss: 0.00053 | Vl_c: 0.48559 | Vl_mrr: 0.56876 | Vl_mr: 132.50851 | Vl_h3: 0.60440 | Vl_h5: 0.65884 | Vl_h10: 0.73191 | time_trn: 3.278 min
+Should stop
+[Epoch: 166 ] Loss: 0.0005338089617160176
+Epoch: 166 | Loss: 0.00053 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 167 ] Loss: 0.0005336063535144549
+Epoch: 167 | Loss: 0.00053 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 168 ] Loss: 0.0005334837383449229
+Epoch: 168 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 169 ] Loss: 0.0005332962356505977
+Epoch: 169 | Loss: 0.00053 |  Time_Train: 3.360 min
+Should stop
+[Epoch: 170 ] Loss: 0.0005332050615686534
+This run over 49136 datapoints took 1.675 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.7110
+mrr : 0.5258
+hits_at 1 : 0.4467
+hits_at 3 : 0.5548
+hits_at 5 : 0.6075
+hits_at 10 : 0.6803
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 121.7012
+mrr : 0.6142
+hits_at 1 : 0.5265
+hits_at 3 : 0.6577
+hits_at 5 : 0.7118
+hits_at 10 : 0.7836
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 133.2061
+mrr : 0.5700
+hits_at 1 : 0.4866
+hits_at 3 : 0.6063
+hits_at 5 : 0.6597
+hits_at 10 : 0.7319
+Epoch: 170 | Loss: 0.00053 | Vl_c: 0.48661 | Vl_mrr: 0.57002 | Vl_mr: 133.20608 | Vl_h3: 0.60628 | Vl_h5: 0.65968 | Vl_h10: 0.73195 | time_trn: 3.286 min
+Should stop
+[Epoch: 171 ] Loss: 0.0005331106618590782
+Epoch: 171 | Loss: 0.00053 |  Time_Train: 3.358 min
+Should stop
+[Epoch: 172 ] Loss: 0.0005328631732992043
+Epoch: 172 | Loss: 0.00053 |  Time_Train: 3.356 min
+Should stop
+[Epoch: 173 ] Loss: 0.0005327012184201209
+Epoch: 173 | Loss: 0.00053 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 174 ] Loss: 0.000532603327095296
+Epoch: 174 | Loss: 0.00053 |  Time_Train: 3.351 min
+Should stop
+[Epoch: 175 ] Loss: 0.0005323800289975497
+This run over 49136 datapoints took 1.680 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 141.0602
+mrr : 0.5263
+hits_at 1 : 0.4472
+hits_at 3 : 0.5556
+hits_at 5 : 0.6086
+hits_at 10 : 0.6821
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 121.6707
+mrr : 0.6137
+hits_at 1 : 0.5261
+hits_at 3 : 0.6563
+hits_at 5 : 0.7123
+hits_at 10 : 0.7844
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 131.3655
+mrr : 0.5700
+hits_at 1 : 0.4867
+hits_at 3 : 0.6059
+hits_at 5 : 0.6605
+hits_at 10 : 0.7333
+Epoch: 175 | Loss: 0.00053 | Vl_c: 0.48667 | Vl_mrr: 0.56997 | Vl_mr: 131.36546 | Vl_h3: 0.60591 | Vl_h5: 0.66045 | Vl_h10: 0.73325 | time_trn: 3.277 min
+Should stop
+[Epoch: 176 ] Loss: 0.0005322489693825722
+Epoch: 176 | Loss: 0.00053 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 177 ] Loss: 0.0005321211516078043
+Epoch: 177 | Loss: 0.00053 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 178 ] Loss: 0.0005319343275337424
+Epoch: 178 | Loss: 0.00053 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 179 ] Loss: 0.0005317947600866403
+Epoch: 179 | Loss: 0.00053 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 180 ] Loss: 0.0005316701294909226
+This run over 49136 datapoints took 1.680 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.4134
+mrr : 0.5271
+hits_at 1 : 0.4481
+hits_at 3 : 0.5567
+hits_at 5 : 0.6095
+hits_at 10 : 0.6824
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 122.4535
+mrr : 0.6131
+hits_at 1 : 0.5245
+hits_at 3 : 0.6562
+hits_at 5 : 0.7112
+hits_at 10 : 0.7845
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 133.4334
+mrr : 0.5701
+hits_at 1 : 0.4863
+hits_at 3 : 0.6064
+hits_at 5 : 0.6604
+hits_at 10 : 0.7334
+Epoch: 180 | Loss: 0.00053 | Vl_c: 0.48632 | Vl_mrr: 0.57015 | Vl_mr: 133.43343 | Vl_h3: 0.60644 | Vl_h5: 0.66037 | Vl_h10: 0.73343 | time_trn: 3.282 min
+Should stop
+[Epoch: 181 ] Loss: 0.0005314710233752333
+Epoch: 181 | Loss: 0.00053 |  Time_Train: 3.355 min
+Should stop
+[Epoch: 182 ] Loss: 0.0005313316031360937
+Epoch: 182 | Loss: 0.00053 |  Time_Train: 3.353 min
+Should stop
+[Epoch: 183 ] Loss: 0.0005311992288386085
+Epoch: 183 | Loss: 0.00053 |  Time_Train: 3.341 min
+Should stop
+[Epoch: 184 ] Loss: 0.0005309884874956282
+Epoch: 184 | Loss: 0.00053 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 185 ] Loss: 0.0005308745690797973
+This run over 49136 datapoints took 1.680 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 143.1249
+mrr : 0.5287
+hits_at 1 : 0.4499
+hits_at 3 : 0.5579
+hits_at 5 : 0.6100
+hits_at 10 : 0.6837
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 123.2329
+mrr : 0.6158
+hits_at 1 : 0.5285
+hits_at 3 : 0.6570
+hits_at 5 : 0.7139
+hits_at 10 : 0.7858
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 133.1789
+mrr : 0.5722
+hits_at 1 : 0.4892
+hits_at 3 : 0.6075
+hits_at 5 : 0.6620
+hits_at 10 : 0.7347
+Epoch: 185 | Loss: 0.00053 | Vl_c: 0.48921 | Vl_mrr: 0.57221 | Vl_mr: 133.17891 | Vl_h3: 0.60746 | Vl_h5: 0.66196 | Vl_h10: 0.73474 | time_trn: 3.270 min
+Should stop
+[Epoch: 186 ] Loss: 0.0005307751037274997
+Epoch: 186 | Loss: 0.00053 |  Time_Train: 3.328 min
+Should stop
+[Epoch: 187 ] Loss: 0.000530604881390288
+Epoch: 187 | Loss: 0.00053 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 188 ] Loss: 0.0005304719116745924
+Epoch: 188 | Loss: 0.00053 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 189 ] Loss: 0.0005303345833647441
+Epoch: 189 | Loss: 0.00053 |  Time_Train: 3.358 min
+Should stop
+[Epoch: 190 ] Loss: 0.0005301663663208563
+This run over 49136 datapoints took 1.680 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.4889
+mrr : 0.5296
+hits_at 1 : 0.4508
+hits_at 3 : 0.5596
+hits_at 5 : 0.6112
+hits_at 10 : 0.6845
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 123.1469
+mrr : 0.6152
+hits_at 1 : 0.5281
+hits_at 3 : 0.6560
+hits_at 5 : 0.7127
+hits_at 10 : 0.7858
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 134.3179
+mrr : 0.5724
+hits_at 1 : 0.4895
+hits_at 3 : 0.6078
+hits_at 5 : 0.6619
+hits_at 10 : 0.7352
+Epoch: 190 | Loss: 0.00053 | Vl_c: 0.48946 | Vl_mrr: 0.57240 | Vl_mr: 134.31791 | Vl_h3: 0.60780 | Vl_h5: 0.66194 | Vl_h10: 0.73516 | time_trn: 3.272 min
+Should stop
+[Epoch: 191 ] Loss: 0.0005299857745759506
+Epoch: 191 | Loss: 0.00053 |  Time_Train: 3.353 min
+Should stop
+[Epoch: 192 ] Loss: 0.000529915270743697
+Epoch: 192 | Loss: 0.00053 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 193 ] Loss: 0.0005297467817450608
+Epoch: 193 | Loss: 0.00053 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 194 ] Loss: 0.0005297862361811238
+Epoch: 194 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 195 ] Loss: 0.0005294865145207504
+This run over 49136 datapoints took 1.683 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 143.6580
+mrr : 0.5302
+hits_at 1 : 0.4512
+hits_at 3 : 0.5601
+hits_at 5 : 0.6125
+hits_at 10 : 0.6847
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 123.6955
+mrr : 0.6155
+hits_at 1 : 0.5282
+hits_at 3 : 0.6576
+hits_at 5 : 0.7129
+hits_at 10 : 0.7868
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 133.6768
+mrr : 0.5728
+hits_at 1 : 0.4897
+hits_at 3 : 0.6088
+hits_at 5 : 0.6627
+hits_at 10 : 0.7358
+Epoch: 195 | Loss: 0.00053 | Vl_c: 0.48968 | Vl_mrr: 0.57282 | Vl_mr: 133.67675 | Vl_h3: 0.60884 | Vl_h5: 0.66271 | Vl_h10: 0.73575 | time_trn: 3.275 min
+Should stop
+[Epoch: 196 ] Loss: 0.0005293339405324116
+Epoch: 196 | Loss: 0.00053 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 197 ] Loss: 0.0005291495155259369
+Epoch: 197 | Loss: 0.00053 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 198 ] Loss: 0.0005291105626665265
+Epoch: 198 | Loss: 0.00053 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 199 ] Loss: 0.0005289794658414292
+Epoch: 199 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 200 ] Loss: 0.0005286696583809011
+This run over 49136 datapoints took 1.684 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.3560
+mrr : 0.5307
+hits_at 1 : 0.4518
+hits_at 3 : 0.5610
+hits_at 5 : 0.6130
+hits_at 10 : 0.6850
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 123.7919
+mrr : 0.6194
+hits_at 1 : 0.5335
+hits_at 3 : 0.6598
+hits_at 5 : 0.7148
+hits_at 10 : 0.7861
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 134.0739
+mrr : 0.5750
+hits_at 1 : 0.4926
+hits_at 3 : 0.6104
+hits_at 5 : 0.6639
+hits_at 10 : 0.7356
+Epoch: 200 | Loss: 0.00053 | Vl_c: 0.49263 | Vl_mrr: 0.57504 | Vl_mr: 134.07394 | Vl_h3: 0.61041 | Vl_h5: 0.66391 | Vl_h10: 0.73557 | time_trn: 3.274 min
+Should stop
+[Epoch: 201 ] Loss: 0.0005284743909309735
+Epoch: 201 | Loss: 0.00053 |  Time_Train: 3.354 min
+Should stop
+[Epoch: 202 ] Loss: 0.0005283069197219982
+Epoch: 202 | Loss: 0.00053 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 203 ] Loss: 0.0005281693863905822
+Epoch: 203 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 204 ] Loss: 0.0005281530020036149
+Epoch: 204 | Loss: 0.00053 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 205 ] Loss: 0.0005280133128495855
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 142.6463
+mrr : 0.5310
+hits_at 1 : 0.4515
+hits_at 3 : 0.5618
+hits_at 5 : 0.6144
+hits_at 10 : 0.6865
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 124.2976
+mrr : 0.6183
+hits_at 1 : 0.5306
+hits_at 3 : 0.6624
+hits_at 5 : 0.7151
+hits_at 10 : 0.7879
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 133.4719
+mrr : 0.5747
+hits_at 1 : 0.4910
+hits_at 3 : 0.6121
+hits_at 5 : 0.6647
+hits_at 10 : 0.7372
+Epoch: 205 | Loss: 0.00053 | Vl_c: 0.49102 | Vl_mrr: 0.57467 | Vl_mr: 133.47194 | Vl_h3: 0.61210 | Vl_h5: 0.66473 | Vl_h10: 0.73720 | time_trn: 3.265 min
+Should stop
+[Epoch: 206 ] Loss: 0.0005278173427419949
+Epoch: 206 | Loss: 0.00053 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 207 ] Loss: 0.0005277067407554941
+Epoch: 207 | Loss: 0.00053 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 208 ] Loss: 0.0005276077511973456
+Epoch: 208 | Loss: 0.00053 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 209 ] Loss: 0.0005274754179379501
+Epoch: 209 | Loss: 0.00053 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 210 ] Loss: 0.0005272968592954443
+This run over 49136 datapoints took 1.684 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.2588
+mrr : 0.5325
+hits_at 1 : 0.4534
+hits_at 3 : 0.5631
+hits_at 5 : 0.6149
+hits_at 10 : 0.6869
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 124.7372
+mrr : 0.6177
+hits_at 1 : 0.5308
+hits_at 3 : 0.6597
+hits_at 5 : 0.7141
+hits_at 10 : 0.7881
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 134.4980
+mrr : 0.5751
+hits_at 1 : 0.4921
+hits_at 3 : 0.6114
+hits_at 5 : 0.6645
+hits_at 10 : 0.7375
+Epoch: 210 | Loss: 0.00053 | Vl_c: 0.49206 | Vl_mrr: 0.57507 | Vl_mr: 134.49801 | Vl_h3: 0.61138 | Vl_h5: 0.66450 | Vl_h10: 0.73752 | time_trn: 3.270 min
+Should stop
+[Epoch: 211 ] Loss: 0.0005272152755167191
+Epoch: 211 | Loss: 0.00053 |  Time_Train: 3.342 min
+Should stop
+[Epoch: 212 ] Loss: 0.0005272290688746643
+Epoch: 212 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 213 ] Loss: 0.0005270368729765767
+Epoch: 213 | Loss: 0.00053 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 214 ] Loss: 0.0005268284205907534
+Epoch: 214 | Loss: 0.00053 |  Time_Train: 3.327 min
+Should stop
+[Epoch: 215 ] Loss: 0.0005267561762143337
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 143.8229
+mrr : 0.5334
+hits_at 1 : 0.4547
+hits_at 3 : 0.5637
+hits_at 5 : 0.6151
+hits_at 10 : 0.6871
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 125.1710
+mrr : 0.6186
+hits_at 1 : 0.5317
+hits_at 3 : 0.6611
+hits_at 5 : 0.7150
+hits_at 10 : 0.7873
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 134.4969
+mrr : 0.5760
+hits_at 1 : 0.4932
+hits_at 3 : 0.6124
+hits_at 5 : 0.6650
+hits_at 10 : 0.7372
+Epoch: 215 | Loss: 0.00053 | Vl_c: 0.49320 | Vl_mrr: 0.57600 | Vl_mr: 134.49695 | Vl_h3: 0.61242 | Vl_h5: 0.66501 | Vl_h10: 0.73718 | time_trn: 3.274 min
+Should stop
+[Epoch: 216 ] Loss: 0.000526571220696257
+Epoch: 216 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 217 ] Loss: 0.0005265174397448442
+Epoch: 217 | Loss: 0.00053 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 218 ] Loss: 0.0005263696740245414
+Epoch: 218 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 219 ] Loss: 0.0005262589721730595
+Epoch: 219 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 220 ] Loss: 0.0005261252455325974
+This run over 49136 datapoints took 1.684 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.0076
+mrr : 0.5342
+hits_at 1 : 0.4553
+hits_at 3 : 0.5643
+hits_at 5 : 0.6159
+hits_at 10 : 0.6882
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 125.4599
+mrr : 0.6190
+hits_at 1 : 0.5323
+hits_at 3 : 0.6609
+hits_at 5 : 0.7158
+hits_at 10 : 0.7888
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 135.2338
+mrr : 0.5766
+hits_at 1 : 0.4938
+hits_at 3 : 0.6126
+hits_at 5 : 0.6658
+hits_at 10 : 0.7385
+Epoch: 220 | Loss: 0.00053 | Vl_c: 0.49381 | Vl_mrr: 0.57657 | Vl_mr: 135.23378 | Vl_h3: 0.61259 | Vl_h5: 0.66585 | Vl_h10: 0.73848 | time_trn: 3.266 min
+Should stop
+[Epoch: 221 ] Loss: 0.0005260129655442043
+Epoch: 221 | Loss: 0.00053 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 222 ] Loss: 0.00052588800467349
+Epoch: 222 | Loss: 0.00053 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 223 ] Loss: 0.0005257635314185965
+Epoch: 223 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 224 ] Loss: 0.0005256707546556985
+Epoch: 224 | Loss: 0.00053 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 225 ] Loss: 0.0005255687439848437
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 142.3748
+mrr : 0.5347
+hits_at 1 : 0.4555
+hits_at 3 : 0.5659
+hits_at 5 : 0.6165
+hits_at 10 : 0.6885
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 125.4490
+mrr : 0.6188
+hits_at 1 : 0.5313
+hits_at 3 : 0.6613
+hits_at 5 : 0.7168
+hits_at 10 : 0.7885
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 133.9119
+mrr : 0.5768
+hits_at 1 : 0.4934
+hits_at 3 : 0.6136
+hits_at 5 : 0.6667
+hits_at 10 : 0.7385
+Epoch: 225 | Loss: 0.00053 | Vl_c: 0.49339 | Vl_mrr: 0.57676 | Vl_mr: 133.91192 | Vl_h3: 0.61362 | Vl_h5: 0.66668 | Vl_h10: 0.73852 | time_trn: 3.265 min
+Should stop
+[Epoch: 226 ] Loss: 0.0005253925433155416
+Epoch: 226 | Loss: 0.00053 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 227 ] Loss: 0.0005253310632469526
+Epoch: 227 | Loss: 0.00053 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 228 ] Loss: 0.0005252765968637415
+Epoch: 228 | Loss: 0.00053 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 229 ] Loss: 0.0005250995593889467
+Epoch: 229 | Loss: 0.00053 |  Time_Train: 3.351 min
+Should stop
+[Epoch: 230 ] Loss: 0.0005249302481085861
+This run over 49136 datapoints took 1.685 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 143.9365
+mrr : 0.5353
+hits_at 1 : 0.4563
+hits_at 3 : 0.5657
+hits_at 5 : 0.6175
+hits_at 10 : 0.6891
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 125.5299
+mrr : 0.6210
+hits_at 1 : 0.5350
+hits_at 3 : 0.6626
+hits_at 5 : 0.7161
+hits_at 10 : 0.7884
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 134.7332
+mrr : 0.5781
+hits_at 1 : 0.4957
+hits_at 3 : 0.6142
+hits_at 5 : 0.6668
+hits_at 10 : 0.7387
+Epoch: 230 | Loss: 0.00052 | Vl_c: 0.49569 | Vl_mrr: 0.57812 | Vl_mr: 134.73323 | Vl_h3: 0.61417 | Vl_h5: 0.66682 | Vl_h10: 0.73875 | time_trn: 3.264 min
+Should stop
+[Epoch: 231 ] Loss: 0.0005249209885307132
+Epoch: 231 | Loss: 0.00052 |  Time_Train: 3.342 min
+Should stop
+[Epoch: 232 ] Loss: 0.0005247796557139338
+Epoch: 232 | Loss: 0.00052 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 233 ] Loss: 0.0005246268959564646
+Epoch: 233 | Loss: 0.00052 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 234 ] Loss: 0.0005244855393274603
+Epoch: 234 | Loss: 0.00052 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 235 ] Loss: 0.000524443956146042
+This run over 49136 datapoints took 1.683 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.2266
+mrr : 0.5357
+hits_at 1 : 0.4563
+hits_at 3 : 0.5662
+hits_at 5 : 0.6178
+hits_at 10 : 0.6902
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 126.3923
+mrr : 0.6153
+hits_at 1 : 0.5263
+hits_at 3 : 0.6599
+hits_at 5 : 0.7142
+hits_at 10 : 0.7880
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 135.3095
+mrr : 0.5755
+hits_at 1 : 0.4913
+hits_at 3 : 0.6131
+hits_at 5 : 0.6660
+hits_at 10 : 0.7391
+Epoch: 235 | Loss: 0.00052 | Vl_c: 0.49133 | Vl_mrr: 0.57546 | Vl_mr: 135.30947 | Vl_h3: 0.61307 | Vl_h5: 0.66597 | Vl_h10: 0.73911 | time_trn: 3.261 min
+Should stop
+[Epoch: 236 ] Loss: 0.0005243135953044638
+Epoch: 236 | Loss: 0.00052 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 237 ] Loss: 0.0005242417212278443
+Epoch: 237 | Loss: 0.00052 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 238 ] Loss: 0.0005240081258346029
+Epoch: 238 | Loss: 0.00052 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 239 ] Loss: 0.0005239584209956769
+Epoch: 239 | Loss: 0.00052 |  Time_Train: 3.340 min
+Should stop
+[Epoch: 240 ] Loss: 0.0005238705322126601
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.2532
+mrr : 0.5360
+hits_at 1 : 0.4569
+hits_at 3 : 0.5669
+hits_at 5 : 0.6184
+hits_at 10 : 0.6905
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 125.9420
+mrr : 0.6211
+hits_at 1 : 0.5350
+hits_at 3 : 0.6629
+hits_at 5 : 0.7169
+hits_at 10 : 0.7894
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 135.0976
+mrr : 0.5785
+hits_at 1 : 0.4960
+hits_at 3 : 0.6149
+hits_at 5 : 0.6677
+hits_at 10 : 0.7399
+Epoch: 240 | Loss: 0.00052 | Vl_c: 0.49595 | Vl_mrr: 0.57853 | Vl_mr: 135.09759 | Vl_h3: 0.61489 | Vl_h5: 0.66768 | Vl_h10: 0.73995 | time_trn: 3.267 min
+Should stop
+[Epoch: 241 ] Loss: 0.0005237598729191972
+Epoch: 241 | Loss: 0.00052 |  Time_Train: 3.340 min
+Should stop
+[Epoch: 242 ] Loss: 0.0005236220303666192
+Epoch: 242 | Loss: 0.00052 |  Time_Train: 3.321 min
+Should stop
+[Epoch: 243 ] Loss: 0.000523548044657922
+Epoch: 243 | Loss: 0.00052 |  Time_Train: 3.343 min
+Should stop
+[Epoch: 244 ] Loss: 0.0005234327715910734
+Epoch: 244 | Loss: 0.00052 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 245 ] Loss: 0.0005232687565323318
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.1210
+mrr : 0.5363
+hits_at 1 : 0.4569
+hits_at 3 : 0.5676
+hits_at 5 : 0.6187
+hits_at 10 : 0.6918
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 126.6668
+mrr : 0.6207
+hits_at 1 : 0.5344
+hits_at 3 : 0.6631
+hits_at 5 : 0.7169
+hits_at 10 : 0.7887
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 135.3939
+mrr : 0.5785
+hits_at 1 : 0.4957
+hits_at 3 : 0.6154
+hits_at 5 : 0.6678
+hits_at 10 : 0.7403
+Epoch: 245 | Loss: 0.00052 | Vl_c: 0.49569 | Vl_mrr: 0.57850 | Vl_mr: 135.39387 | Vl_h3: 0.61539 | Vl_h5: 0.66780 | Vl_h10: 0.74027 | time_trn: 3.267 min
+Should stop
+[Epoch: 246 ] Loss: 0.0005232054326206814
+Epoch: 246 | Loss: 0.00052 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 247 ] Loss: 0.0005230991420542328
+Epoch: 247 | Loss: 0.00052 |  Time_Train: 3.344 min
+Should stop
+[Epoch: 248 ] Loss: 0.0005230086358967535
+Epoch: 248 | Loss: 0.00052 |  Time_Train: 3.343 min
+Should stop
+[Epoch: 249 ] Loss: 0.0005228689925094825
+Epoch: 249 | Loss: 0.00052 |  Time_Train: 3.342 min
+Should stop
+[Epoch: 250 ] Loss: 0.0005226962598120862
+This run over 49136 datapoints took 1.685 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 143.4158
+mrr : 0.5377
+hits_at 1 : 0.4592
+hits_at 3 : 0.5687
+hits_at 5 : 0.6201
+hits_at 10 : 0.6927
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 126.9373
+mrr : 0.6217
+hits_at 1 : 0.5357
+hits_at 3 : 0.6638
+hits_at 5 : 0.7169
+hits_at 10 : 0.7890
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 135.1766
+mrr : 0.5797
+hits_at 1 : 0.4974
+hits_at 3 : 0.6162
+hits_at 5 : 0.6685
+hits_at 10 : 0.7408
+Epoch: 250 | Loss: 0.00052 | Vl_c: 0.49744 | Vl_mrr: 0.57973 | Vl_mr: 135.17655 | Vl_h3: 0.61625 | Vl_h5: 0.66851 | Vl_h10: 0.74084 | time_trn: 3.268 min
+Should stop
+[Epoch: 251 ] Loss: 0.0005224562731163479
+Epoch: 251 | Loss: 0.00052 |  Time_Train: 3.351 min
+Should stop
+[Epoch: 252 ] Loss: 0.000522338002917899
+Epoch: 252 | Loss: 0.00052 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 253 ] Loss: 0.0005222894381947916
+Epoch: 253 | Loss: 0.00052 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 254 ] Loss: 0.0005221781310737061
+Epoch: 254 | Loss: 0.00052 |  Time_Train: 3.355 min
+Should stop
+[Epoch: 255 ] Loss: 0.0005221112535674687
+This run over 49136 datapoints took 1.684 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.1447
+mrr : 0.5377
+hits_at 1 : 0.4587
+hits_at 3 : 0.5689
+hits_at 5 : 0.6202
+hits_at 10 : 0.6928
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 127.5618
+mrr : 0.6212
+hits_at 1 : 0.5344
+hits_at 3 : 0.6636
+hits_at 5 : 0.7166
+hits_at 10 : 0.7897
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 136.3533
+mrr : 0.5795
+hits_at 1 : 0.4966
+hits_at 3 : 0.6162
+hits_at 5 : 0.6684
+hits_at 10 : 0.7412
+Epoch: 255 | Loss: 0.00052 | Vl_c: 0.49658 | Vl_mrr: 0.57945 | Vl_mr: 136.35326 | Vl_h3: 0.61625 | Vl_h5: 0.66837 | Vl_h10: 0.74125 | time_trn: 3.268 min
+Should stop
+[Epoch: 256 ] Loss: 0.0005219661830194886
+Epoch: 256 | Loss: 0.00052 |  Time_Train: 3.343 min
+Should stop
+[Epoch: 257 ] Loss: 0.0005218935146391017
+Epoch: 257 | Loss: 0.00052 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 258 ] Loss: 0.0005217421059298547
+Epoch: 258 | Loss: 0.00052 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 259 ] Loss: 0.0005216673428617865
+Epoch: 259 | Loss: 0.00052 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 260 ] Loss: 0.0005216132136776942
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.1102
+mrr : 0.5381
+hits_at 1 : 0.4594
+hits_at 3 : 0.5694
+hits_at 5 : 0.6208
+hits_at 10 : 0.6935
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 127.3560
+mrr : 0.6224
+hits_at 1 : 0.5358
+hits_at 3 : 0.6637
+hits_at 5 : 0.7182
+hits_at 10 : 0.7903
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 136.2331
+mrr : 0.5802
+hits_at 1 : 0.4976
+hits_at 3 : 0.6166
+hits_at 5 : 0.6695
+hits_at 10 : 0.7419
+Epoch: 260 | Loss: 0.00052 | Vl_c: 0.49760 | Vl_mrr: 0.58025 | Vl_mr: 136.23307 | Vl_h3: 0.61655 | Vl_h5: 0.66951 | Vl_h10: 0.74186 | time_trn: 3.260 min
+Should stop
+[Epoch: 261 ] Loss: 0.000521522843525736
+Epoch: 261 | Loss: 0.00052 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 262 ] Loss: 0.0005214541050068659
+Epoch: 262 | Loss: 0.00052 |  Time_Train: 3.344 min
+Should stop
+[Epoch: 263 ] Loss: 0.0005212995284272996
+Epoch: 263 | Loss: 0.00052 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 264 ] Loss: 0.0005211585397337612
+Epoch: 264 | Loss: 0.00052 |  Time_Train: 3.351 min
+Should stop
+[Epoch: 265 ] Loss: 0.0005211048977151405
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.3608
+mrr : 0.5386
+hits_at 1 : 0.4597
+hits_at 3 : 0.5701
+hits_at 5 : 0.6215
+hits_at 10 : 0.6937
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 128.0954
+mrr : 0.6229
+hits_at 1 : 0.5368
+hits_at 3 : 0.6639
+hits_at 5 : 0.7172
+hits_at 10 : 0.7899
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 136.2281
+mrr : 0.5808
+hits_at 1 : 0.4982
+hits_at 3 : 0.6170
+hits_at 5 : 0.6693
+hits_at 10 : 0.7418
+Epoch: 265 | Loss: 0.00052 | Vl_c: 0.49825 | Vl_mrr: 0.58075 | Vl_mr: 136.22810 | Vl_h3: 0.61700 | Vl_h5: 0.66933 | Vl_h10: 0.74184 | time_trn: 3.274 min
+Should stop
+[Epoch: 266 ] Loss: 0.00052102803872093
+Epoch: 266 | Loss: 0.00052 |  Time_Train: 3.342 min
+Should stop
+[Epoch: 267 ] Loss: 0.0005209496851859172
+Epoch: 267 | Loss: 0.00052 |  Time_Train: 3.353 min
+Should stop
+[Epoch: 268 ] Loss: 0.0005208288073518117
+Epoch: 268 | Loss: 0.00052 |  Time_Train: 3.356 min
+Should stop
+[Epoch: 269 ] Loss: 0.0005207089625629533
+Epoch: 269 | Loss: 0.00052 |  Time_Train: 3.353 min
+Should stop
+[Epoch: 270 ] Loss: 0.0005206939716133463
+This run over 49136 datapoints took 1.685 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.2556
+mrr : 0.5394
+hits_at 1 : 0.4601
+hits_at 3 : 0.5710
+hits_at 5 : 0.6226
+hits_at 10 : 0.6938
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 128.2135
+mrr : 0.6231
+hits_at 1 : 0.5373
+hits_at 3 : 0.6643
+hits_at 5 : 0.7189
+hits_at 10 : 0.7906
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 136.2345
+mrr : 0.5813
+hits_at 1 : 0.4987
+hits_at 3 : 0.6177
+hits_at 5 : 0.6708
+hits_at 10 : 0.7422
+Epoch: 270 | Loss: 0.00052 | Vl_c: 0.49868 | Vl_mrr: 0.58125 | Vl_mr: 136.23453 | Vl_h3: 0.61767 | Vl_h5: 0.67077 | Vl_h10: 0.74221 | time_trn: 3.246 min
+Should stop
+[Epoch: 271 ] Loss: 0.0005204850658945509
+Epoch: 271 | Loss: 0.00052 |  Time_Train: 3.342 min
+Should stop
+[Epoch: 272 ] Loss: 0.0005203921436125005
+Epoch: 272 | Loss: 0.00052 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 273 ] Loss: 0.0005203496245487198
+Epoch: 273 | Loss: 0.00052 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 274 ] Loss: 0.0005202857375877227
+Epoch: 274 | Loss: 0.00052 |  Time_Train: 3.341 min
+Should stop
+[Epoch: 275 ] Loss: 0.0005201709648027721
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.4122
+mrr : 0.5402
+hits_at 1 : 0.4614
+hits_at 3 : 0.5716
+hits_at 5 : 0.6234
+hits_at 10 : 0.6951
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 128.9928
+mrr : 0.6215
+hits_at 1 : 0.5352
+hits_at 3 : 0.6634
+hits_at 5 : 0.7163
+hits_at 10 : 0.7900
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 136.7025
+mrr : 0.5808
+hits_at 1 : 0.4983
+hits_at 3 : 0.6175
+hits_at 5 : 0.6698
+hits_at 10 : 0.7426
+Epoch: 275 | Loss: 0.00052 | Vl_c: 0.49829 | Vl_mrr: 0.58081 | Vl_mr: 136.70248 | Vl_h3: 0.61749 | Vl_h5: 0.66983 | Vl_h10: 0.74257 | time_trn: 3.276 min
+Should stop
+[Epoch: 276 ] Loss: 0.0005201151983734091
+Epoch: 276 | Loss: 0.00052 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 277 ] Loss: 0.0005199465433084289
+Epoch: 277 | Loss: 0.00052 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 278 ] Loss: 0.0005199194711730303
+Epoch: 278 | Loss: 0.00052 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 279 ] Loss: 0.000519758631471667
+Epoch: 279 | Loss: 0.00052 |  Time_Train: 3.350 min
+Should stop
+[Epoch: 280 ] Loss: 0.0005196707320491453
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.7894
+mrr : 0.5405
+hits_at 1 : 0.4616
+hits_at 3 : 0.5723
+hits_at 5 : 0.6232
+hits_at 10 : 0.6952
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 128.5788
+mrr : 0.6217
+hits_at 1 : 0.5345
+hits_at 3 : 0.6650
+hits_at 5 : 0.7201
+hits_at 10 : 0.7907
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 136.6841
+mrr : 0.5811
+hits_at 1 : 0.4980
+hits_at 3 : 0.6187
+hits_at 5 : 0.6716
+hits_at 10 : 0.7430
+Epoch: 280 | Loss: 0.00052 | Vl_c: 0.49805 | Vl_mrr: 0.58113 | Vl_mr: 136.68408 | Vl_h3: 0.61865 | Vl_h5: 0.67165 | Vl_h10: 0.74296 | time_trn: 3.271 min
+Should stop
+[Epoch: 281 ] Loss: 0.0005195799538243302
+Epoch: 281 | Loss: 0.00052 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 282 ] Loss: 0.0005195041892354735
+Epoch: 282 | Loss: 0.00052 |  Time_Train: 3.351 min
+Should stop
+[Epoch: 283 ] Loss: 0.0005193909907031703
+Epoch: 283 | Loss: 0.00052 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 284 ] Loss: 0.0005193447039599532
+Epoch: 284 | Loss: 0.00052 |  Time_Train: 3.348 min
+Should stop
+[Epoch: 285 ] Loss: 0.0005192515993989802
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.7905
+mrr : 0.5410
+hits_at 1 : 0.4623
+hits_at 3 : 0.5727
+hits_at 5 : 0.6233
+hits_at 10 : 0.6956
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 129.7570
+mrr : 0.6231
+hits_at 1 : 0.5373
+hits_at 3 : 0.6644
+hits_at 5 : 0.7185
+hits_at 10 : 0.7912
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 137.2738
+mrr : 0.5821
+hits_at 1 : 0.4998
+hits_at 3 : 0.6185
+hits_at 5 : 0.6709
+hits_at 10 : 0.7434
+Epoch: 285 | Loss: 0.00052 | Vl_c: 0.49980 | Vl_mrr: 0.58207 | Vl_mr: 137.27375 | Vl_h3: 0.61853 | Vl_h5: 0.67087 | Vl_h10: 0.74339 | time_trn: 3.271 min
+Should stop
+[Epoch: 286 ] Loss: 0.0005191629136100995
+Epoch: 286 | Loss: 0.00052 |  Time_Train: 3.352 min
+Should stop
+[Epoch: 287 ] Loss: 0.0005190410437688368
+Epoch: 287 | Loss: 0.00052 |  Time_Train: 3.353 min
+Should stop
+[Epoch: 288 ] Loss: 0.0005189448104616492
+Epoch: 288 | Loss: 0.00052 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 289 ] Loss: 0.0005188695956931253
+Epoch: 289 | Loss: 0.00052 |  Time_Train: 3.349 min
+Should stop
+[Epoch: 290 ] Loss: 0.0005187607013752839
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.2607
+mrr : 0.5410
+hits_at 1 : 0.4622
+hits_at 3 : 0.5733
+hits_at 5 : 0.6241
+hits_at 10 : 0.6962
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 129.1067
+mrr : 0.6231
+hits_at 1 : 0.5367
+hits_at 3 : 0.6654
+hits_at 5 : 0.7186
+hits_at 10 : 0.7900
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 137.6837
+mrr : 0.5821
+hits_at 1 : 0.4995
+hits_at 3 : 0.6194
+hits_at 5 : 0.6714
+hits_at 10 : 0.7431
+Epoch: 290 | Loss: 0.00052 | Vl_c: 0.49945 | Vl_mrr: 0.58208 | Vl_mr: 137.68373 | Vl_h3: 0.61938 | Vl_h5: 0.67136 | Vl_h10: 0.74310 | time_trn: 3.265 min
+Should stop
+[Epoch: 291 ] Loss: 0.0005186792551783027
+Epoch: 291 | Loss: 0.00052 |  Time_Train: 3.346 min
+Should stop
+[Epoch: 292 ] Loss: 0.0005185947435091987
+Epoch: 292 | Loss: 0.00052 |  Time_Train: 3.347 min
+Should stop
+[Epoch: 293 ] Loss: 0.0005184814872758776
+Epoch: 293 | Loss: 0.00052 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 294 ] Loss: 0.0005184299789001621
+Epoch: 294 | Loss: 0.00052 |  Time_Train: 3.336 min
+Should stop
+[Epoch: 295 ] Loss: 0.0005184677189686183
+This run over 49136 datapoints took 1.686 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.5850
+mrr : 0.5414
+hits_at 1 : 0.4624
+hits_at 3 : 0.5733
+hits_at 5 : 0.6246
+hits_at 10 : 0.6968
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 130.4292
+mrr : 0.6252
+hits_at 1 : 0.5396
+hits_at 3 : 0.6669
+hits_at 5 : 0.7207
+hits_at 10 : 0.7909
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 137.5071
+mrr : 0.5833
+hits_at 1 : 0.5010
+hits_at 3 : 0.6201
+hits_at 5 : 0.6726
+hits_at 10 : 0.7439
+Epoch: 295 | Loss: 0.00052 | Vl_c: 0.50100 | Vl_mrr: 0.58333 | Vl_mr: 137.50710 | Vl_h3: 0.62012 | Vl_h5: 0.67264 | Vl_h10: 0.74385 | time_trn: 3.260 min
+Should stop
+[Epoch: 296 ] Loss: 0.0005182812973943393
+Epoch: 296 | Loss: 0.00052 |  Time_Train: 3.342 min
+Should stop
+[Epoch: 297 ] Loss: 0.0005181515466073272
+Epoch: 297 | Loss: 0.00052 |  Time_Train: 3.331 min
+Should stop
+[Epoch: 298 ] Loss: 0.0005180826839046081
+Epoch: 298 | Loss: 0.00052 |  Time_Train: 3.342 min
+Should stop
+[Epoch: 299 ] Loss: 0.0005180020624099792
+Epoch: 299 | Loss: 0.00052 |  Time_Train: 3.345 min
+Should stop
+[Epoch: 300 ] Loss: 0.0005178192827550648
+This run over 49136 datapoints took 1.148 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 144.8747
+mrr : 0.5418
+hits_at 1 : 0.4622
+hits_at 3 : 0.5745
+hits_at 5 : 0.6256
+hits_at 10 : 0.6963
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 129.6583
+mrr : 0.6240
+hits_at 1 : 0.5378
+hits_at 3 : 0.6654
+hits_at 5 : 0.7202
+hits_at 10 : 0.7905
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 137.2665
+mrr : 0.5829
+hits_at 1 : 0.5000
+hits_at 3 : 0.6200
+hits_at 5 : 0.6729
+hits_at 10 : 0.7434
+Epoch: 300 | Loss: 0.00052 | Vl_c: 0.50002 | Vl_mrr: 0.58290 | Vl_mr: 137.26646 | Vl_h3: 0.61997 | Vl_h5: 0.67291 | Vl_h10: 0.74339 | time_trn: 3.188 min
+Should stop
+[Epoch: 301 ] Loss: 0.0005176442627893217
+Epoch: 301 | Loss: 0.00052 |  Time_Train: 2.324 min
+Should stop
+[Epoch: 302 ] Loss: 0.0005175605368673463
+Epoch: 302 | Loss: 0.00052 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 303 ] Loss: 0.0005174606915327362
+Epoch: 303 | Loss: 0.00052 |  Time_Train: 2.318 min
+Should stop
+[Epoch: 304 ] Loss: 0.0005173971884946089
+Epoch: 304 | Loss: 0.00052 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 305 ] Loss: 0.0005172544915694743
+This run over 49136 datapoints took 1.146 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.0124
+mrr : 0.5423
+hits_at 1 : 0.4631
+hits_at 3 : 0.5751
+hits_at 5 : 0.6250
+hits_at 10 : 0.6979
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 130.6222
+mrr : 0.6247
+hits_at 1 : 0.5386
+hits_at 3 : 0.6657
+hits_at 5 : 0.7198
+hits_at 10 : 0.7906
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 138.3173
+mrr : 0.5835
+hits_at 1 : 0.5008
+hits_at 3 : 0.6204
+hits_at 5 : 0.6724
+hits_at 10 : 0.7443
+Epoch: 305 | Loss: 0.00052 | Vl_c: 0.50083 | Vl_mrr: 0.58346 | Vl_mr: 138.31728 | Vl_h3: 0.62040 | Vl_h5: 0.67240 | Vl_h10: 0.74428 | time_trn: 2.320 min
+Should stop
+[Epoch: 306 ] Loss: 0.0005171962704543724
+Epoch: 306 | Loss: 0.00052 |  Time_Train: 2.318 min
+Should stop
+[Epoch: 307 ] Loss: 0.0005172039565677093
+Epoch: 307 | Loss: 0.00052 |  Time_Train: 2.318 min
+Should stop
+[Epoch: 308 ] Loss: 0.0005170500174577292
+Epoch: 308 | Loss: 0.00052 |  Time_Train: 2.321 min
+Should stop
+[Epoch: 309 ] Loss: 0.0005169766804773533
+Epoch: 309 | Loss: 0.00052 |  Time_Train: 2.325 min
+Should stop
+[Epoch: 310 ] Loss: 0.0005168811719512434
+This run over 49136 datapoints took 1.147 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.3103
+mrr : 0.5425
+hits_at 1 : 0.4638
+hits_at 3 : 0.5744
+hits_at 5 : 0.6261
+hits_at 10 : 0.6981
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 130.3382
+mrr : 0.6243
+hits_at 1 : 0.5382
+hits_at 3 : 0.6657
+hits_at 5 : 0.7207
+hits_at 10 : 0.7911
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 138.3243
+mrr : 0.5834
+hits_at 1 : 0.5010
+hits_at 3 : 0.6201
+hits_at 5 : 0.6734
+hits_at 10 : 0.7446
+Epoch: 310 | Loss: 0.00052 | Vl_c: 0.50098 | Vl_mrr: 0.58341 | Vl_mr: 138.32426 | Vl_h3: 0.62007 | Vl_h5: 0.67342 | Vl_h10: 0.74461 | time_trn: 2.327 min
+Should stop
+[Epoch: 311 ] Loss: 0.0005168034797543354
+Epoch: 311 | Loss: 0.00052 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 312 ] Loss: 0.0005167511175161433
+Epoch: 312 | Loss: 0.00052 |  Time_Train: 2.318 min
+Should stop
+[Epoch: 313 ] Loss: 0.0005166460311840103
+Epoch: 313 | Loss: 0.00052 |  Time_Train: 2.315 min
+Should stop
+[Epoch: 314 ] Loss: 0.0005165878904562775
+Epoch: 314 | Loss: 0.00052 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 315 ] Loss: 0.000516435972345557
+This run over 49136 datapoints took 1.146 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.5201
+mrr : 0.5433
+hits_at 1 : 0.4644
+hits_at 3 : 0.5752
+hits_at 5 : 0.6270
+hits_at 10 : 0.6984
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 131.2025
+mrr : 0.6242
+hits_at 1 : 0.5383
+hits_at 3 : 0.6657
+hits_at 5 : 0.7199
+hits_at 10 : 0.7909
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 138.3613
+mrr : 0.5837
+hits_at 1 : 0.5014
+hits_at 3 : 0.6205
+hits_at 5 : 0.6734
+hits_at 10 : 0.7447
+Epoch: 315 | Loss: 0.00052 | Vl_c: 0.50136 | Vl_mrr: 0.58375 | Vl_mr: 138.36134 | Vl_h3: 0.62046 | Vl_h5: 0.67344 | Vl_h10: 0.74469 | time_trn: 2.327 min
+Should stop
+[Epoch: 316 ] Loss: 0.0005164261375026096
+Epoch: 316 | Loss: 0.00052 |  Time_Train: 2.322 min
+Should stop
+[Epoch: 317 ] Loss: 0.0005162810598616263
+Epoch: 317 | Loss: 0.00052 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 318 ] Loss: 0.0005162626730523124
+Epoch: 318 | Loss: 0.00052 |  Time_Train: 2.321 min
+Should stop
+[Epoch: 319 ] Loss: 0.0005161961519413373
+Epoch: 319 | Loss: 0.00052 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 320 ] Loss: 0.0005160467497075816
+This run over 49136 datapoints took 1.146 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.1007
+mrr : 0.5436
+hits_at 1 : 0.4648
+hits_at 3 : 0.5754
+hits_at 5 : 0.6270
+hits_at 10 : 0.6982
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 130.5921
+mrr : 0.6260
+hits_at 1 : 0.5403
+hits_at 3 : 0.6685
+hits_at 5 : 0.7213
+hits_at 10 : 0.7918
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 138.3464
+mrr : 0.5848
+hits_at 1 : 0.5025
+hits_at 3 : 0.6219
+hits_at 5 : 0.6741
+hits_at 10 : 0.7450
+Epoch: 320 | Loss: 0.00052 | Vl_c: 0.50254 | Vl_mrr: 0.58479 | Vl_mr: 138.34639 | Vl_h3: 0.62193 | Vl_h5: 0.67415 | Vl_h10: 0.74499 | time_trn: 2.324 min
+Should stop
+[Epoch: 321 ] Loss: 0.0005160443423085304
+Epoch: 321 | Loss: 0.00052 |  Time_Train: 2.298 min
+Should stop
+[Epoch: 322 ] Loss: 0.0005159528271994973
+Epoch: 322 | Loss: 0.00052 |  Time_Train: 2.319 min
+Should stop
+[Epoch: 323 ] Loss: 0.0005159422275506688
+Epoch: 323 | Loss: 0.00052 |  Time_Train: 2.322 min
+Should stop
+[Epoch: 324 ] Loss: 0.0005157280273553582
+Epoch: 324 | Loss: 0.00052 |  Time_Train: 2.321 min
+Should stop
+[Epoch: 325 ] Loss: 0.0005156843048453734
+This run over 49136 datapoints took 1.145 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.6954
+mrr : 0.5437
+hits_at 1 : 0.4645
+hits_at 3 : 0.5763
+hits_at 5 : 0.6272
+hits_at 10 : 0.6992
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 131.8958
+mrr : 0.6249
+hits_at 1 : 0.5398
+hits_at 3 : 0.6648
+hits_at 5 : 0.7192
+hits_at 10 : 0.7917
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 138.7956
+mrr : 0.5843
+hits_at 1 : 0.5022
+hits_at 3 : 0.6206
+hits_at 5 : 0.6732
+hits_at 10 : 0.7454
+Epoch: 325 | Loss: 0.00052 | Vl_c: 0.50216 | Vl_mrr: 0.58429 | Vl_mr: 138.79559 | Vl_h3: 0.62056 | Vl_h5: 0.67319 | Vl_h10: 0.74544 | time_trn: 2.272 min
+Should stop
+[Epoch: 326 ] Loss: 0.0005156003387182829
+Epoch: 326 | Loss: 0.00052 |  Time_Train: 2.322 min
+Should stop
+[Epoch: 327 ] Loss: 0.000515558229979106
+Epoch: 327 | Loss: 0.00052 |  Time_Train: 2.317 min
+Should stop
+[Epoch: 328 ] Loss: 0.0005154413142065001
+Epoch: 328 | Loss: 0.00052 |  Time_Train: 2.318 min
+Should stop
+[Epoch: 329 ] Loss: 0.0005153361671334907
+Epoch: 329 | Loss: 0.00052 |  Time_Train: 2.317 min
+Should stop
+[Epoch: 330 ] Loss: 0.0005152770529755137
+This run over 49136 datapoints took 1.145 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.8530
+mrr : 0.5440
+hits_at 1 : 0.4653
+hits_at 3 : 0.5761
+hits_at 5 : 0.6279
+hits_at 10 : 0.7002
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 131.4978
+mrr : 0.6266
+hits_at 1 : 0.5410
+hits_at 3 : 0.6683
+hits_at 5 : 0.7214
+hits_at 10 : 0.7916
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 138.6754
+mrr : 0.5853
+hits_at 1 : 0.5032
+hits_at 3 : 0.6222
+hits_at 5 : 0.6747
+hits_at 10 : 0.7459
+Epoch: 330 | Loss: 0.00052 | Vl_c: 0.50315 | Vl_mrr: 0.58529 | Vl_mr: 138.67543 | Vl_h3: 0.62223 | Vl_h5: 0.67466 | Vl_h10: 0.74589 | time_trn: 2.325 min
+Should stop
+[Epoch: 331 ] Loss: 0.0005151891963361858
+Epoch: 331 | Loss: 0.00052 |  Time_Train: 2.322 min
+Should stop
+[Epoch: 332 ] Loss: 0.0005151346933620854
+Epoch: 332 | Loss: 0.00052 |  Time_Train: 2.328 min
+Should stop
+[Epoch: 333 ] Loss: 0.0005150573329038096
+Epoch: 333 | Loss: 0.00052 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 334 ] Loss: 0.0005150102358131275
+Epoch: 334 | Loss: 0.00052 |  Time_Train: 2.322 min
+Should stop
+[Epoch: 335 ] Loss: 0.0005148861454115241
+This run over 49136 datapoints took 1.145 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.3201
+mrr : 0.5447
+hits_at 1 : 0.4659
+hits_at 3 : 0.5763
+hits_at 5 : 0.6278
+hits_at 10 : 0.7002
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 131.9923
+mrr : 0.6264
+hits_at 1 : 0.5408
+hits_at 3 : 0.6678
+hits_at 5 : 0.7218
+hits_at 10 : 0.7920
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 138.6562
+mrr : 0.5856
+hits_at 1 : 0.5034
+hits_at 3 : 0.6220
+hits_at 5 : 0.6748
+hits_at 10 : 0.7461
+Epoch: 335 | Loss: 0.00051 | Vl_c: 0.50336 | Vl_mrr: 0.58556 | Vl_mr: 138.65618 | Vl_h3: 0.62205 | Vl_h5: 0.67478 | Vl_h10: 0.74609 | time_trn: 2.322 min
+Should stop
+[Epoch: 336 ] Loss: 0.0005147965637087909
+Epoch: 336 | Loss: 0.00051 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 337 ] Loss: 0.0005147811584940227
+Epoch: 337 | Loss: 0.00051 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 338 ] Loss: 0.0005146666623924893
+Epoch: 338 | Loss: 0.00051 |  Time_Train: 2.328 min
+Should stop
+[Epoch: 339 ] Loss: 0.0005146330215732209
+Epoch: 339 | Loss: 0.00051 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 340 ] Loss: 0.0005145595335006188
+This run over 49136 datapoints took 1.146 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.9305
+mrr : 0.5452
+hits_at 1 : 0.4665
+hits_at 3 : 0.5773
+hits_at 5 : 0.6278
+hits_at 10 : 0.7004
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 131.8967
+mrr : 0.6260
+hits_at 1 : 0.5406
+hits_at 3 : 0.6675
+hits_at 5 : 0.7201
+hits_at 10 : 0.7924
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 139.4136
+mrr : 0.5856
+hits_at 1 : 0.5035
+hits_at 3 : 0.6224
+hits_at 5 : 0.6739
+hits_at 10 : 0.7464
+Epoch: 340 | Loss: 0.00051 | Vl_c: 0.50352 | Vl_mrr: 0.58560 | Vl_mr: 139.41361 | Vl_h3: 0.62242 | Vl_h5: 0.67395 | Vl_h10: 0.74640 | time_trn: 2.319 min
+Should stop
+[Epoch: 341 ] Loss: 0.0005144424880273834
+Epoch: 341 | Loss: 0.00051 |  Time_Train: 2.325 min
+Should stop
+[Epoch: 342 ] Loss: 0.0005143380581358054
+Epoch: 342 | Loss: 0.00051 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 343 ] Loss: 0.0005143517651392518
+Epoch: 343 | Loss: 0.00051 |  Time_Train: 2.320 min
+Should stop
+[Epoch: 344 ] Loss: 0.000514230978388314
+Epoch: 344 | Loss: 0.00051 |  Time_Train: 2.324 min
+Should stop
+[Epoch: 345 ] Loss: 0.0005141165904269322
+This run over 49136 datapoints took 1.143 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.5982
+mrr : 0.5453
+hits_at 1 : 0.4663
+hits_at 3 : 0.5777
+hits_at 5 : 0.6284
+hits_at 10 : 0.7012
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 132.6929
+mrr : 0.6257
+hits_at 1 : 0.5398
+hits_at 3 : 0.6675
+hits_at 5 : 0.7213
+hits_at 10 : 0.7917
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 139.1455
+mrr : 0.5855
+hits_at 1 : 0.5031
+hits_at 3 : 0.6226
+hits_at 5 : 0.6749
+hits_at 10 : 0.7465
+Epoch: 345 | Loss: 0.00051 | Vl_c: 0.50307 | Vl_mrr: 0.58553 | Vl_mr: 139.14553 | Vl_h3: 0.62262 | Vl_h5: 0.67486 | Vl_h10: 0.74646 | time_trn: 2.326 min
+Should stop
+[Epoch: 346 ] Loss: 0.0005140576323150248
+Epoch: 346 | Loss: 0.00051 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 347 ] Loss: 0.00051398684729586
+Epoch: 347 | Loss: 0.00051 |  Time_Train: 2.326 min
+Should stop
+[Epoch: 348 ] Loss: 0.0005139282222736332
+Epoch: 348 | Loss: 0.00051 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 349 ] Loss: 0.0005138221499014725
+Epoch: 349 | Loss: 0.00051 |  Time_Train: 2.293 min
+Should stop
+[Epoch: 350 ] Loss: 0.0005136492263122212
+This run over 49136 datapoints took 1.146 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.6689
+mrr : 0.5462
+hits_at 1 : 0.4674
+hits_at 3 : 0.5786
+hits_at 5 : 0.6285
+hits_at 10 : 0.7005
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 132.5004
+mrr : 0.6274
+hits_at 1 : 0.5414
+hits_at 3 : 0.6700
+hits_at 5 : 0.7221
+hits_at 10 : 0.7916
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 139.5847
+mrr : 0.5868
+hits_at 1 : 0.5044
+hits_at 3 : 0.6243
+hits_at 5 : 0.6753
+hits_at 10 : 0.7461
+Epoch: 350 | Loss: 0.00051 | Vl_c: 0.50444 | Vl_mrr: 0.58679 | Vl_mr: 139.58466 | Vl_h3: 0.62433 | Vl_h5: 0.67527 | Vl_h10: 0.74605 | time_trn: 2.317 min
+Should stop
+[Epoch: 351 ] Loss: 0.0005135256501533473
+Epoch: 351 | Loss: 0.00051 |  Time_Train: 2.317 min
+Should stop
+[Epoch: 352 ] Loss: 0.0005134138946531329
+Epoch: 352 | Loss: 0.00051 |  Time_Train: 2.263 min
+Should stop
+[Epoch: 353 ] Loss: 0.0005133774358850347
+Epoch: 353 | Loss: 0.00051 |  Time_Train: 2.313 min
+Should stop
+[Epoch: 354 ] Loss: 0.0005133794123559967
+Epoch: 354 | Loss: 0.00051 |  Time_Train: 2.315 min
+Should stop
+[Epoch: 355 ] Loss: 0.0005133033761501536
+This run over 49136 datapoints took 1.144 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.1708
+mrr : 0.5459
+hits_at 1 : 0.4669
+hits_at 3 : 0.5785
+hits_at 5 : 0.6285
+hits_at 10 : 0.7014
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 133.0271
+mrr : 0.6267
+hits_at 1 : 0.5408
+hits_at 3 : 0.6686
+hits_at 5 : 0.7218
+hits_at 10 : 0.7929
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 139.5990
+mrr : 0.5863
+hits_at 1 : 0.5039
+hits_at 3 : 0.6235
+hits_at 5 : 0.6751
+hits_at 10 : 0.7471
+Epoch: 355 | Loss: 0.00051 | Vl_c: 0.50387 | Vl_mrr: 0.58631 | Vl_mr: 139.59897 | Vl_h3: 0.62353 | Vl_h5: 0.67513 | Vl_h10: 0.74711 | time_trn: 2.315 min
+Should stop
+[Epoch: 356 ] Loss: 0.0005131940213500431
+Epoch: 356 | Loss: 0.00051 |  Time_Train: 2.319 min
+Should stop
+[Epoch: 357 ] Loss: 0.0005130856265259881
+Epoch: 357 | Loss: 0.00051 |  Time_Train: 2.324 min
+Should stop
+[Epoch: 358 ] Loss: 0.0005129865625476
+Epoch: 358 | Loss: 0.00051 |  Time_Train: 2.322 min
+Should stop
+[Epoch: 359 ] Loss: 0.0005129475581794761
+Epoch: 359 | Loss: 0.00051 |  Time_Train: 2.317 min
+Should stop
+[Epoch: 360 ] Loss: 0.0005129144725847333
+This run over 49136 datapoints took 1.144 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 145.4773
+mrr : 0.5466
+hits_at 1 : 0.4678
+hits_at 3 : 0.5785
+hits_at 5 : 0.6294
+hits_at 10 : 0.7012
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 133.1156
+mrr : 0.6262
+hits_at 1 : 0.5403
+hits_at 3 : 0.6683
+hits_at 5 : 0.7212
+hits_at 10 : 0.7922
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 139.2964
+mrr : 0.5864
+hits_at 1 : 0.5040
+hits_at 3 : 0.6234
+hits_at 5 : 0.6753
+hits_at 10 : 0.7467
+Epoch: 360 | Loss: 0.00051 | Vl_c: 0.50403 | Vl_mrr: 0.58644 | Vl_mr: 139.29642 | Vl_h3: 0.62339 | Vl_h5: 0.67529 | Vl_h10: 0.74670 | time_trn: 2.320 min
+Should stop
+[Epoch: 361 ] Loss: 0.0005128413820017771
+Epoch: 361 | Loss: 0.00051 |  Time_Train: 2.317 min
+Should stop
+[Epoch: 362 ] Loss: 0.0005127389124811697
+Epoch: 362 | Loss: 0.00051 |  Time_Train: 2.316 min
+Should stop
+[Epoch: 363 ] Loss: 0.0005126853013677771
+Epoch: 363 | Loss: 0.00051 |  Time_Train: 2.324 min
+Should stop
+[Epoch: 364 ] Loss: 0.0005126558868525229
+Epoch: 364 | Loss: 0.00051 |  Time_Train: 2.313 min
+Should stop
+[Epoch: 365 ] Loss: 0.0005125497930324718
+This run over 49136 datapoints took 1.143 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.0441
+mrr : 0.5465
+hits_at 1 : 0.4674
+hits_at 3 : 0.5793
+hits_at 5 : 0.6302
+hits_at 10 : 0.7026
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 133.3633
+mrr : 0.6277
+hits_at 1 : 0.5423
+hits_at 3 : 0.6690
+hits_at 5 : 0.7218
+hits_at 10 : 0.7927
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 139.7037
+mrr : 0.5871
+hits_at 1 : 0.5048
+hits_at 3 : 0.6241
+hits_at 5 : 0.6760
+hits_at 10 : 0.7476
+Epoch: 365 | Loss: 0.00051 | Vl_c: 0.50482 | Vl_mrr: 0.58713 | Vl_mr: 139.70370 | Vl_h3: 0.62415 | Vl_h5: 0.67596 | Vl_h10: 0.74764 | time_trn: 2.314 min
+Should stop
+[Epoch: 366 ] Loss: 0.0005124674011580286
+Epoch: 366 | Loss: 0.00051 |  Time_Train: 2.321 min
+Should stop
+[Epoch: 367 ] Loss: 0.0005123782837092409
+Epoch: 367 | Loss: 0.00051 |  Time_Train: 2.318 min
+Should stop
+[Epoch: 368 ] Loss: 0.0005123269170247076
+Epoch: 368 | Loss: 0.00051 |  Time_Train: 2.320 min
+Should stop
+[Epoch: 369 ] Loss: 0.0005123166944872141
+Epoch: 369 | Loss: 0.00051 |  Time_Train: 2.320 min
+Should stop
+[Epoch: 370 ] Loss: 0.0005121523570908842
+This run over 49136 datapoints took 1.139 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.9411
+mrr : 0.5472
+hits_at 1 : 0.4680
+hits_at 3 : 0.5805
+hits_at 5 : 0.6298
+hits_at 10 : 0.7027
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 133.6648
+mrr : 0.6273
+hits_at 1 : 0.5414
+hits_at 3 : 0.6692
+hits_at 5 : 0.7223
+hits_at 10 : 0.7923
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 140.3030
+mrr : 0.5873
+hits_at 1 : 0.5047
+hits_at 3 : 0.6248
+hits_at 5 : 0.6761
+hits_at 10 : 0.7475
+Epoch: 370 | Loss: 0.00051 | Vl_c: 0.50472 | Vl_mrr: 0.58729 | Vl_mr: 140.30296 | Vl_h3: 0.62482 | Vl_h5: 0.67608 | Vl_h10: 0.74748 | time_trn: 2.324 min
+Should stop
+[Epoch: 371 ] Loss: 0.000512107999757116
+Epoch: 371 | Loss: 0.00051 |  Time_Train: 2.317 min
+Should stop
+[Epoch: 372 ] Loss: 0.0005120449288855388
+Epoch: 372 | Loss: 0.00051 |  Time_Train: 2.319 min
+Should stop
+[Epoch: 373 ] Loss: 0.0005120027074464227
+Epoch: 373 | Loss: 0.00051 |  Time_Train: 2.321 min
+Should stop
+[Epoch: 374 ] Loss: 0.0005118644051433936
+Epoch: 374 | Loss: 0.00051 |  Time_Train: 2.325 min
+Should stop
+[Epoch: 375 ] Loss: 0.0005118474011319352
+This run over 49136 datapoints took 1.145 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 147.8797
+mrr : 0.5476
+hits_at 1 : 0.4689
+hits_at 3 : 0.5800
+hits_at 5 : 0.6305
+hits_at 10 : 0.7025
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 134.1477
+mrr : 0.6270
+hits_at 1 : 0.5409
+hits_at 3 : 0.6690
+hits_at 5 : 0.7225
+hits_at 10 : 0.7921
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 141.0137
+mrr : 0.5873
+hits_at 1 : 0.5049
+hits_at 3 : 0.6245
+hits_at 5 : 0.6765
+hits_at 10 : 0.7473
+Epoch: 375 | Loss: 0.00051 | Vl_c: 0.50490 | Vl_mrr: 0.58732 | Vl_mr: 141.01370 | Vl_h3: 0.62449 | Vl_h5: 0.67653 | Vl_h10: 0.74729 | time_trn: 2.315 min
+Should stop
+[Epoch: 376 ] Loss: 0.0005118001728769882
+Epoch: 376 | Loss: 0.00051 |  Time_Train: 2.290 min
+Should stop
+[Epoch: 377 ] Loss: 0.0005117069245982605
+Epoch: 377 | Loss: 0.00051 |  Time_Train: 2.318 min
+Should stop
+[Epoch: 378 ] Loss: 0.0005116418447742704
+Epoch: 378 | Loss: 0.00051 |  Time_Train: 2.317 min
+Should stop
+[Epoch: 379 ] Loss: 0.00051155425502326
+Epoch: 379 | Loss: 0.00051 |  Time_Train: 2.269 min
+Should stop
+[Epoch: 380 ] Loss: 0.0005114933855721738
+This run over 49136 datapoints took 1.145 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 147.3874
+mrr : 0.5473
+hits_at 1 : 0.4684
+hits_at 3 : 0.5802
+hits_at 5 : 0.6298
+hits_at 10 : 0.7031
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 133.7398
+mrr : 0.6276
+hits_at 1 : 0.5422
+hits_at 3 : 0.6694
+hits_at 5 : 0.7224
+hits_at 10 : 0.7931
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 140.5636
+mrr : 0.5875
+hits_at 1 : 0.5053
+hits_at 3 : 0.6248
+hits_at 5 : 0.6761
+hits_at 10 : 0.7481
+Epoch: 380 | Loss: 0.00051 | Vl_c: 0.50527 | Vl_mrr: 0.58746 | Vl_mr: 140.56360 | Vl_h3: 0.62482 | Vl_h5: 0.67610 | Vl_h10: 0.74811 | time_trn: 2.320 min
+Should stop
+[Epoch: 381 ] Loss: 0.0005114512395665835
+Epoch: 381 | Loss: 0.00051 |  Time_Train: 2.321 min
+Should stop
+[Epoch: 382 ] Loss: 0.0005113694643893602
+Epoch: 382 | Loss: 0.00051 |  Time_Train: 2.326 min
+Should stop
+[Epoch: 383 ] Loss: 0.0005113813388084802
+Epoch: 383 | Loss: 0.00051 |  Time_Train: 2.324 min
+Should stop
+[Epoch: 384 ] Loss: 0.0005112717307994153
+Epoch: 384 | Loss: 0.00051 |  Time_Train: 2.320 min
+Should stop
+[Epoch: 385 ] Loss: 0.0005111332912524041
+This run over 49136 datapoints took 1.144 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 147.2229
+mrr : 0.5472
+hits_at 1 : 0.4680
+hits_at 3 : 0.5801
+hits_at 5 : 0.6309
+hits_at 10 : 0.7034
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 134.9080
+mrr : 0.6286
+hits_at 1 : 0.5432
+hits_at 3 : 0.6712
+hits_at 5 : 0.7222
+hits_at 10 : 0.7925
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 141.0655
+mrr : 0.5879
+hits_at 1 : 0.5056
+hits_at 3 : 0.6257
+hits_at 5 : 0.6766
+hits_at 10 : 0.7479
+Epoch: 385 | Loss: 0.00051 | Vl_c: 0.50562 | Vl_mrr: 0.58794 | Vl_mr: 141.06545 | Vl_h3: 0.62565 | Vl_h5: 0.67655 | Vl_h10: 0.74794 | time_trn: 2.325 min
+Should stop
+[Epoch: 386 ] Loss: 0.0005111070441008263
+Epoch: 386 | Loss: 0.00051 |  Time_Train: 2.314 min
+Should stop
+[Epoch: 387 ] Loss: 0.0005110340549027803
+Epoch: 387 | Loss: 0.00051 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 388 ] Loss: 0.0005109672870566237
+Epoch: 388 | Loss: 0.00051 |  Time_Train: 2.320 min
+Should stop
+[Epoch: 389 ] Loss: 0.0005108936184502028
+Epoch: 389 | Loss: 0.00051 |  Time_Train: 2.315 min
+Should stop
+[Epoch: 390 ] Loss: 0.0005108461121044966
+This run over 49136 datapoints took 1.145 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 146.5144
+mrr : 0.5481
+hits_at 1 : 0.4692
+hits_at 3 : 0.5808
+hits_at 5 : 0.6309
+hits_at 10 : 0.7046
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 134.4716
+mrr : 0.6285
+hits_at 1 : 0.5431
+hits_at 3 : 0.6696
+hits_at 5 : 0.7236
+hits_at 10 : 0.7928
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 140.4930
+mrr : 0.5883
+hits_at 1 : 0.5061
+hits_at 3 : 0.6252
+hits_at 5 : 0.6772
+hits_at 10 : 0.7487
+Epoch: 390 | Loss: 0.00051 | Vl_c: 0.50615 | Vl_mrr: 0.58830 | Vl_mr: 140.49302 | Vl_h3: 0.62516 | Vl_h5: 0.67724 | Vl_h10: 0.74868 | time_trn: 2.320 min
+Should stop
+[Epoch: 391 ] Loss: 0.0005108150311838476
+Epoch: 391 | Loss: 0.00051 |  Time_Train: 2.313 min
+Should stop
+[Epoch: 392 ] Loss: 0.0005106976283583574
+Epoch: 392 | Loss: 0.00051 |  Time_Train: 2.318 min
+Should stop
+[Epoch: 393 ] Loss: 0.0005106464395618402
+Epoch: 393 | Loss: 0.00051 |  Time_Train: 2.322 min
+Should stop
+[Epoch: 394 ] Loss: 0.0005106098798591809
+Epoch: 394 | Loss: 0.00051 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 395 ] Loss: 0.0005105757191115216
+This run over 49136 datapoints took 1.146 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 147.2724
+mrr : 0.5483
+hits_at 1 : 0.4692
+hits_at 3 : 0.5817
+hits_at 5 : 0.6313
+hits_at 10 : 0.7045
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 135.0818
+mrr : 0.6274
+hits_at 1 : 0.5412
+hits_at 3 : 0.6699
+hits_at 5 : 0.7222
+hits_at 10 : 0.7923
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 141.1771
+mrr : 0.5878
+hits_at 1 : 0.5052
+hits_at 3 : 0.6258
+hits_at 5 : 0.6767
+hits_at 10 : 0.7484
+Epoch: 395 | Loss: 0.00051 | Vl_c: 0.50523 | Vl_mrr: 0.58781 | Vl_mr: 141.17710 | Vl_h3: 0.62579 | Vl_h5: 0.67673 | Vl_h10: 0.74839 | time_trn: 2.322 min
+Should stop
+[Epoch: 396 ] Loss: 0.0005104465221416933
+Epoch: 396 | Loss: 0.00051 |  Time_Train: 2.320 min
+Should stop
+[Epoch: 397 ] Loss: 0.000510326912716694
+Epoch: 397 | Loss: 0.00051 |  Time_Train: 2.322 min
+Should stop
+[Epoch: 398 ] Loss: 0.0005102685352177602
+Epoch: 398 | Loss: 0.00051 |  Time_Train: 2.319 min
+Should stop
+[Epoch: 399 ] Loss: 0.0005102726261354838
+Epoch: 399 | Loss: 0.00051 |  Time_Train: 2.323 min
+Should stop
+[Epoch: 400 ] Loss: 0.0005100881691542013
+This run over 49136 datapoints took 1.145 min
+---------
+
+Object prediction results
+count : 24568.0000
+mr : 148.3524
+mrr : 0.5485
+hits_at 1 : 0.4695
+hits_at 3 : 0.5810
+hits_at 5 : 0.6318
+hits_at 10 : 0.7050
+---------
+
+Subject prediction results
+count : 24568.0000
+mr : 135.1585
+mrr : 0.6288
+hits_at 1 : 0.5431
+hits_at 3 : 0.6714
+hits_at 5 : 0.7234
+hits_at 10 : 0.7936
+---------
+
+Overall prediction results
+count : 24568.0000
+mr : 141.7554
+mrr : 0.5887
+hits_at 1 : 0.5063
+hits_at 3 : 0.6262
+hits_at 5 : 0.6776
+hits_at 10 : 0.7493
+Epoch: 400 | Loss: 0.00051 | Vl_c: 0.50631 | Vl_mrr: 0.58866 | Vl_mr: 141.75543 | Vl_h3: 0.62624 | Vl_h5: 0.67757 | Vl_h10: 0.74927 | time_trn: 2.318 min
