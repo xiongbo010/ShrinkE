@@ -1,5 +1,5 @@
 
-SHrinking Embedding
+Shrinking Embedding
 
 ## Requirements
 * Python 3.7
