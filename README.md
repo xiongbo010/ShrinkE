@@ -1,5 +1,5 @@
 
-Monotonitic Embedding
+SHrinking Embedding
 
 ## Requirements
 * Python 3.7
