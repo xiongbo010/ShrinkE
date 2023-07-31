@@ -2,13 +2,6 @@
 Shrinking Embedding
 
 ## Requirements
-* Python 3.7
-* PyTorch 1.5.1
-* torch-geometric 1.6.1
-* torch-scatter 2.0.5
-* tqdm
-* wandb
-
 Create a new conda environment and execute `setup.sh`.
 Alternatively
 ```
@@ -24,4 +17,4 @@ nohup python -u run.py DEVICE cuda DATASET jf17k > logs/nohup_shrink_jf17k_200_n
 
 You should obtain the following results after training (see logging file at logs/nohup_shrink_jf17k_200_new.out)
 
-![log]([https://github.com/xiongbo010/ShrinkE/assets/18528272/c2ff8a4e-56e8-4aad-bfb1-385c69a2385f](https://github.com/xiongbo010/ShrinkE/blob/main/log.png)https://github.com/xiongbo010/ShrinkE/blob/main/log.png)
+![log](https://github.com/xiongbo010/ShrinkE/blob/main/log.png)
