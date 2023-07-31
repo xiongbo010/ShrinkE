@@ -24,4 +24,4 @@ nohup python -u run.py DEVICE cuda DATASET jf17k > logs/nohup_shrink_jf17k_200_n
 
 You should obtain the following results after training (see logging file at logs/nohup_shrink_jf17k_200_new.out)
 
-![log](https://github.com/xiongbo010/ShrinkE/assets/18528272/db7770ac-bb03-49fc-8026-f9524b05f86e)
+![log](https://github.com/xiongbo010/ShrinkE/log.png)
