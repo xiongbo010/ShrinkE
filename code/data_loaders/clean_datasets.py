@@ -156,7 +156,7 @@ def load_clean_wd50k(name, subtype, maxlen=43) -> Dict:
             if len(statement)>3:
                 num_qualifier = int((len(statement) - 3)/2)
                 for pos in range(num_qualifier):
-                    start = 3+pos*2-1
+                    start = 3+pos*2
                     end = start+2
                     stat = statement.copy()
                     del stat[start:end]
@@ -170,7 +170,7 @@ def load_clean_wd50k(name, subtype, maxlen=43) -> Dict:
             if len(statement)>3:
                 num_qualifier = int((len(statement) - 3)/2)
                 for pos in range(num_qualifier):
-                    start = 3+pos*2-1
+                    start = 3+pos*2
                     end = start+2
                     stat = statement.copy()
                     del stat[start:end]
@@ -184,7 +184,7 @@ def load_clean_wd50k(name, subtype, maxlen=43) -> Dict:
             if len(statement)>3:
                 num_qualifier = int((len(statement) - 3)/2)
                 for pos in range(num_qualifier):
-                    start = 3+pos*2-1
+                    start = 3+pos*2
                     end = start+2
                     stat = statement.copy()
                     del stat[start:end]
